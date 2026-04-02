@@ -56,7 +56,7 @@
       <img src="SiteProofAppIcon.png" alt="SiteProof App Icon" class="app-icon" />
       <h1>Privacy Policy for SiteProof</h1>
     </div>
-    <p class="effective-date"><strong>Last updated:</strong> March 2026</p>
+    <p class="effective-date"><strong>Last updated:</strong> April 2026</p>
 
     <p>
       SiteProof ("the app") is designed to respect your privacy.
@@ -131,11 +131,13 @@
       When Dispute-Proof Mode is enabled:
     </p>
     <ul>
-      <li>Photos may be processed using cryptographic functions (e.g., hashing)</li>
-      <li>Verification data is stored locally on your device</li>
+      <li>Photos are processed using cryptographic hash functions (SHA-256) to generate tamper-evident fingerprints</li>
+      <li>HMAC signatures are created using a device-local key stored securely in the iOS Keychain</li>
+      <li>All verification data is stored locally on your device</li>
     </ul>
     <p>
-      This process is performed entirely on-device and does not involve any external services.
+      This process is performed entirely on-device. The cryptographic key never leaves your device
+      and is not transmitted to any external service.
     </p>
 
     <h2>8. In-App Purchases</h2>
@@ -161,29 +163,64 @@
       <li>Removing the app from your device</li>
     </ul>
     <p>
-      Deleting the app will remove all locally stored data.
+      Deleting the app will remove all locally stored data, including any cryptographic keys
+      stored in the Keychain.
     </p>
 
-    <h2>11. Children's Privacy</h2>
+    <h2>11. Legal Basis for Processing (GDPR)</h2>
+    <p>
+      To the extent any data processing occurs, our legal bases are:
+    </p>
+    <ul>
+      <li><strong>Consent:</strong> You grant device permissions (camera, location, photo library) voluntarily and can revoke them at any time in your device settings.</li>
+      <li><strong>Legitimate interest:</strong> Providing core app functionality such as local data storage, cryptographic verification, and report generation.</li>
+    </ul>
+
+    <h2>12. Your Rights (EU/EEA Users)</h2>
+    <p>
+      Under the General Data Protection Regulation (GDPR), you have the right to access,
+      rectify, erase, restrict processing of, and request portability of your personal data.
+    </p>
+    <p>
+      Because SiteProof stores all data locally on your device and has no access to it,
+      you exercise these rights directly:
+    </p>
+    <ul>
+      <li><strong>Access and portability:</strong> Use the app's export features to retrieve your data at any time.</li>
+      <li><strong>Erasure:</strong> Delete individual jobs in the app, or delete the app entirely to remove all data.</li>
+      <li><strong>Restriction and rectification:</strong> Edit or manage your data directly within the app.</li>
+    </ul>
+    <p>
+      If you have questions about exercising your rights, contact us at
+      <a href="mailto:forthemcreation@gmail.com">forthemcreation@gmail.com</a>.
+    </p>
+
+    <h2>13. Children's Privacy</h2>
     <p>
       SiteProof is not directed toward children under the age of 13
       and does not knowingly collect personal information from children.
     </p>
 
-    <h2>12. Changes to This Policy</h2>
+    <h2>14. Changes to This Policy</h2>
     <p>
       This Privacy Policy may be updated from time to time.
       Any changes will be posted on this page with an updated date.
     </p>
 
-    <h2>13. Contact</h2>
+    <h2>15. Governing Law</h2>
+    <p>
+      This Privacy Policy is governed by and construed in accordance with the laws of
+      the Province of Quebec, Canada, without regard to its conflict of law provisions.
+    </p>
+
+    <h2>16. Contact</h2>
     <p>
       SiteProof is developed and maintained by ForThemCreation.
       If you have any questions about this Privacy Policy, you can contact us at:
       <a href="mailto:forthemcreation@gmail.com">forthemcreation@gmail.com</a>.
     </p>
 
-    <h2>14. Website Hosting</h2>
+    <h2>17. Website Hosting</h2>
     <p>
       This privacy policy page is hosted on GitHub Pages. When you visit this page,
       GitHub may process technical information such as IP address, browser details,

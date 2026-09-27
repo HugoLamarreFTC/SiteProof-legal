@@ -113,11 +113,12 @@
       All data created in SiteProof is stored locally on your device, including:
     </p>
     <ul>
-      <li>Photos you capture within the app</li>
+      <li>Photos you capture in the app or import from your photo library</li>
       <li>Job details (titles, notes, timestamps, locations)</li>
-      <li>Before and after comparisons</li>
+      <li>Before and after comparisons and your Showroom selections</li>
       <li>Generated reports and exports</li>
       <li>Client signatures (if using sign-off features)</li>
+      <li>Your company branding, if you add it (logo, company name, phone, email, and website)</li>
     </ul>
     <p>
       This data is not transmitted to any server and remains under your control.
@@ -168,8 +169,12 @@
       <li>Automatically populate addresses</li>
     </ul>
     <p>
-      Location data is used only on-device and is never transmitted or stored externally.
-      You can disable location access at any time in your device settings.
+      To turn a location into a street address, SiteProof sends the coordinates to Apple's
+      geocoding service, which is part of iOS; Apple's handling of that request is covered by
+      Apple's privacy policy. SiteProof does not otherwise transmit or store your location
+      outside your device, and location is never included in analytics.
+      You can turn location tagging off in the app (<strong>Settings &rarr; Auto-GPS Tagging</strong>)
+      or disable location access at any time in your device settings.
     </p>
 
     <h2>6. Photos and Camera Access</h2>
@@ -178,9 +183,11 @@
     </p>
     <ul>
       <li>Capture before and after photos</li>
-      <li>Save generated images and reports</li>
+      <li>Import photos you choose, such as a before or after photo or your company logo &mdash; the system photo picker shares only the photos you select</li>
+      <li>Save generated images and videos to your photo library (this only needs permission to add photos)</li>
     </ul>
     <p>
+      PDF reports and evidence packages are saved to the Files app or shared only when you choose.
       All images remain on your device unless you choose to share them.
     </p>
 
@@ -222,8 +229,16 @@
       <li>Removing the app from your device</li>
     </ul>
     <p>
-      Deleting the app will remove all locally stored data, including any cryptographic keys
-      stored in the Keychain.
+      Deleting the app removes the photos, jobs, and other data it stores on your device.
+      iOS may keep the app's cryptographic signing key in the Keychain after the app is deleted;
+      the key contains no personal information, never leaves your device, and is used again if
+      you reinstall SiteProof.
+    </p>
+    <p>
+      Analytics and crash data that has already been sent (Section 4) is kept by Google under
+      Firebase's data-retention settings. Because it is linked only to random identifiers, not to
+      your name or email, we generally cannot tell which records are yours; you can stop further
+      collection at any time in <strong>Settings &rarr; Data &amp; Privacy</strong>.
     </p>
 
     <h2>11. Legal Basis for Processing (GDPR)</h2>
@@ -235,19 +250,21 @@
       <li><strong>Legitimate interest:</strong> Providing core app functionality such as local data storage, cryptographic verification, and report generation.</li>
     </ul>
 
-    <h2>12. Your Rights (EU/EEA Users)</h2>
+    <h2>12. Your Rights (EU/EEA, UK, and Switzerland)</h2>
     <p>
-      Under the General Data Protection Regulation (GDPR), you have the right to access,
-      rectify, erase, restrict processing of, and request portability of your personal data.
+      Under the General Data Protection Regulation (GDPR), the UK GDPR, and the Swiss Federal Act
+      on Data Protection, you have the right to access, rectify, erase, restrict processing of,
+      and request portability of your personal data.
     </p>
     <p>
-      Because SiteProof stores all data locally on your device and has no access to it,
-      you exercise these rights directly:
+      The content you create in SiteProof stays on your device and we have no access to it,
+      so you exercise these rights directly:
     </p>
     <ul>
       <li><strong>Access and portability:</strong> Use the app's export features to retrieve your data at any time.</li>
       <li><strong>Erasure:</strong> Delete individual jobs in the app, or delete the app entirely to remove all data.</li>
       <li><strong>Restriction and rectification:</strong> Edit or manage your data directly within the app.</li>
+      <li><strong>Analytics and crash data:</strong> Withdraw your consent at any time in <strong>Settings &rarr; Data &amp; Privacy</strong>. Because this data is linked only to random identifiers, we may not be able to identify the records that relate to you, but we will help where we can.</li>
     </ul>
     <p>
       If you have questions about exercising your rights, contact us at
@@ -312,11 +329,12 @@
       Toutes les donn&eacute;es cr&eacute;&eacute;es dans SiteProof sont stock&eacute;es localement sur votre appareil, notamment :
     </p>
     <ul>
-      <li>Les photos prises dans l'application</li>
+      <li>Les photos prises dans l'application ou import&eacute;es depuis votre phototh&egrave;que</li>
       <li>Les d&eacute;tails des chantiers (titres, notes, horodatages, emplacements)</li>
-      <li>Les comparaisons avant/apr&egrave;s</li>
+      <li>Les comparaisons avant/apr&egrave;s et vos s&eacute;lections pour le Showroom</li>
       <li>Les rapports et exports g&eacute;n&eacute;r&eacute;s</li>
       <li>Les signatures des clients (si vous utilisez la fonction d'approbation)</li>
+      <li>L'image de marque de votre entreprise, si vous l'ajoutez (logo, nom de l'entreprise, t&eacute;l&eacute;phone, adresse e-mail et site web)</li>
     </ul>
     <p>
       Ces donn&eacute;es ne sont transmises &agrave; aucun serveur et restent sous votre contr&ocirc;le.
@@ -367,8 +385,12 @@
       <li>Remplir automatiquement les adresses</li>
     </ul>
     <p>
-      Les donn&eacute;es de localisation sont utilis&eacute;es uniquement sur l'appareil et ne sont jamais transmises ni stock&eacute;es &agrave; l'ext&eacute;rieur.
-      Vous pouvez d&eacute;sactiver l'acc&egrave;s &agrave; la localisation &agrave; tout moment dans les r&eacute;glages de votre appareil.
+      Pour convertir une localisation en adresse postale, SiteProof envoie les coordonn&eacute;es au service de g&eacute;ocodage d'Apple,
+      qui fait partie d'iOS ; le traitement de cette demande par Apple est r&eacute;gi par la politique de confidentialit&eacute; d'Apple.
+      Hormis ce cas, SiteProof ne transmet ni ne stocke votre localisation en dehors de votre appareil, et la localisation
+      n'est jamais incluse dans les donn&eacute;es d'analyse.
+      Vous pouvez d&eacute;sactiver la g&eacute;olocalisation dans l'application (<strong>R&eacute;glages &rarr; G&eacute;olocalisation automatique</strong>)
+      ou d&eacute;sactiver l'acc&egrave;s &agrave; la localisation &agrave; tout moment dans les r&eacute;glages de votre appareil.
     </p>
 
     <h2>6. Photos et acc&egrave;s &agrave; la cam&eacute;ra</h2>
@@ -377,9 +399,11 @@
     </p>
     <ul>
       <li>Prendre des photos avant et apr&egrave;s</li>
-      <li>Enregistrer les images et rapports g&eacute;n&eacute;r&eacute;s</li>
+      <li>Importer les photos de votre choix, telles qu'une photo avant ou apr&egrave;s, ou le logo de votre entreprise &mdash; le s&eacute;lecteur de photos du syst&egrave;me ne partage que les photos que vous s&eacute;lectionnez</li>
+      <li>Enregistrer les images et vid&eacute;os g&eacute;n&eacute;r&eacute;es dans votre phototh&egrave;que (cela ne n&eacute;cessite que l'autorisation d'ajouter des photos)</li>
     </ul>
     <p>
+      Les rapports PDF et les dossiers de preuves ne sont enregistr&eacute;s dans l'application Fichiers ou partag&eacute;s que lorsque vous le choisissez.
       Toutes les images restent sur votre appareil sauf si vous choisissez de les partager.
     </p>
 
@@ -421,8 +445,16 @@
       <li>Supprimant l'application de votre appareil</li>
     </ul>
     <p>
-      La suppression de l'application entra&icirc;nera la suppression de toutes les donn&eacute;es stock&eacute;es localement, y compris les cl&eacute;s cryptographiques
-      stock&eacute;es dans le trousseau.
+      La suppression de l'application entra&icirc;ne la suppression des photos, des chantiers et des autres donn&eacute;es qu'elle stocke sur votre appareil.
+      iOS peut conserver la cl&eacute; de signature cryptographique de l'application dans le trousseau une fois l'application supprim&eacute;e ;
+      cette cl&eacute; ne contient aucune information personnelle, ne quitte jamais votre appareil et est r&eacute;utilis&eacute;e si vous
+      r&eacute;installez SiteProof.
+    </p>
+    <p>
+      Les donn&eacute;es d'analyse et de plantage d&eacute;j&agrave; envoy&eacute;es (section 4) sont conserv&eacute;es par Google conform&eacute;ment aux param&egrave;tres
+      de conservation des donn&eacute;es de Firebase. Comme elles ne sont associ&eacute;es qu'&agrave; des identifiants al&eacute;atoires, et non &agrave; votre nom
+      ou &agrave; votre adresse e-mail, nous ne pouvons g&eacute;n&eacute;ralement pas savoir quels enregistrements sont les v&ocirc;tres ; vous pouvez
+      mettre fin &agrave; toute collecte ult&eacute;rieure &agrave; tout moment dans <strong>R&eacute;glages &rarr; Donn&eacute;es et confidentialit&eacute;</strong>.
     </p>
 
     <h2>11. Base juridique du traitement (RGPD)</h2>
@@ -434,19 +466,21 @@
       <li><strong>Int&eacute;r&ecirc;t l&eacute;gitime :</strong> Fournir les fonctionnalit&eacute;s essentielles de l'application telles que le stockage local des donn&eacute;es, la v&eacute;rification cryptographique et la g&eacute;n&eacute;ration de rapports.</li>
     </ul>
 
-    <h2>12. Vos droits (utilisateurs UE/EEE)</h2>
+    <h2>12. Vos droits (UE/EEE, Royaume-Uni et Suisse)</h2>
     <p>
-      En vertu du R&egrave;glement g&eacute;n&eacute;ral sur la protection des donn&eacute;es (RGPD), vous avez le droit d'acc&eacute;der,
-      de rectifier, d'effacer, de limiter le traitement et de demander la portabilit&eacute; de vos donn&eacute;es personnelles.
+      En vertu du R&egrave;glement g&eacute;n&eacute;ral sur la protection des donn&eacute;es (RGPD), du RGPD britannique et de la loi f&eacute;d&eacute;rale suisse
+      sur la protection des donn&eacute;es (LPD), vous avez le droit d'acc&eacute;der, de rectifier, d'effacer, de limiter le traitement
+      et de demander la portabilit&eacute; de vos donn&eacute;es personnelles.
     </p>
     <p>
-      Comme SiteProof stocke toutes les donn&eacute;es localement sur votre appareil et n'y a pas acc&egrave;s,
-      vous exercez ces droits directement :
+      Le contenu que vous cr&eacute;ez dans SiteProof reste sur votre appareil et nous n'y avons pas acc&egrave;s,
+      de sorte que vous exercez ces droits directement :
     </p>
     <ul>
       <li><strong>Acc&egrave;s et portabilit&eacute; :</strong> Utilisez les fonctions d'exportation de l'application pour r&eacute;cup&eacute;rer vos donn&eacute;es &agrave; tout moment.</li>
       <li><strong>Effacement :</strong> Supprimez des chantiers individuels dans l'application, ou supprimez l'application enti&egrave;rement pour supprimer toutes les donn&eacute;es.</li>
       <li><strong>Limitation et rectification :</strong> Modifiez ou g&eacute;rez vos donn&eacute;es directement dans l'application.</li>
+      <li><strong>Donn&eacute;es d'analyse et de plantage :</strong> Retirez votre consentement &agrave; tout moment dans <strong>R&eacute;glages &rarr; Donn&eacute;es et confidentialit&eacute;</strong>. Comme ces donn&eacute;es ne sont associ&eacute;es qu'&agrave; des identifiants al&eacute;atoires, il se peut que nous ne soyons pas en mesure d'identifier les enregistrements qui vous concernent, mais nous vous aiderons dans la mesure du possible.</li>
     </ul>
     <p>
       Si vous avez des questions concernant l'exercice de vos droits, contactez-nous &agrave;
@@ -511,11 +545,12 @@
       Todos los datos creados en SiteProof se almacenan localmente en su dispositivo, incluyendo:
     </p>
     <ul>
-      <li>Fotos capturadas dentro de la aplicaci&oacute;n</li>
+      <li>Fotos capturadas dentro de la aplicaci&oacute;n o importadas desde su fototeca</li>
       <li>Detalles de los trabajos (t&iacute;tulos, notas, marcas de tiempo, ubicaciones)</li>
-      <li>Comparaciones antes y despu&eacute;s</li>
+      <li>Comparaciones antes y despu&eacute;s, y sus selecciones para el Showroom</li>
       <li>Informes y exportaciones generados</li>
       <li>Firmas de clientes (si utiliza las funciones de aprobaci&oacute;n)</li>
+      <li>Imagen de marca de su empresa, si la a&ntilde;ade (logo, nombre de la empresa, tel&eacute;fono, correo electr&oacute;nico y sitio web)</li>
     </ul>
     <p>
       Estos datos no se transmiten a ning&uacute;n servidor y permanecen bajo su control.
@@ -566,8 +601,12 @@
       <li>Completar direcciones autom&aacute;ticamente</li>
     </ul>
     <p>
-      Los datos de ubicaci&oacute;n se utilizan &uacute;nicamente en el dispositivo y nunca se transmiten ni almacenan externamente.
-      Puede desactivar el acceso a la ubicaci&oacute;n en cualquier momento en la configuraci&oacute;n de su dispositivo.
+      Para convertir una ubicaci&oacute;n en una direcci&oacute;n postal, SiteProof env&iacute;a las coordenadas al servicio de geocodificaci&oacute;n de Apple,
+      que forma parte de iOS; el tratamiento de dicha solicitud por parte de Apple se rige por la Pol&iacute;tica de Privacidad de Apple.
+      Salvo en este caso, SiteProof no transmite ni almacena su ubicaci&oacute;n fuera de su dispositivo, y la ubicaci&oacute;n nunca se incluye
+      en los datos de an&aacute;lisis.
+      Puede desactivar el geoetiquetado en la aplicaci&oacute;n (<strong>Ajustes &rarr; Geoetiquetado autom&aacute;tico</strong>) o desactivar
+      el acceso a la ubicaci&oacute;n en cualquier momento en la configuraci&oacute;n de su dispositivo.
     </p>
 
     <h2>6. Fotos y acceso a la c&aacute;mara</h2>
@@ -576,9 +615,11 @@
     </p>
     <ul>
       <li>Capturar fotos antes y despu&eacute;s</li>
-      <li>Guardar im&aacute;genes e informes generados</li>
+      <li>Importar las fotos que usted elija, como una foto de antes o de despu&eacute;s, o el logo de su empresa; el selector de fotos del sistema solo comparte las fotos que usted seleccione</li>
+      <li>Guardar im&aacute;genes y videos generados en su fototeca (esto solo requiere permiso para a&ntilde;adir fotos)</li>
     </ul>
     <p>
+      Los informes PDF y los paquetes de evidencias solo se guardan en la aplicaci&oacute;n Archivos o se comparten cuando usted as&iacute; lo decide.
       Todas las im&aacute;genes permanecen en su dispositivo a menos que elija compartirlas.
     </p>
 
@@ -620,8 +661,15 @@
       <li>Eliminando la aplicaci&oacute;n de su dispositivo</li>
     </ul>
     <p>
-      Eliminar la aplicaci&oacute;n eliminar&aacute; todos los datos almacenados localmente, incluidas las claves criptogr&aacute;ficas
-      almacenadas en el llavero.
+      Eliminar la aplicaci&oacute;n borra las fotos, los trabajos y los dem&aacute;s datos que esta almacena en su dispositivo.
+      iOS puede conservar la clave de firma criptogr&aacute;fica de la aplicaci&oacute;n en el llavero una vez eliminada la aplicaci&oacute;n;
+      la clave no contiene informaci&oacute;n personal, nunca sale de su dispositivo y se vuelve a utilizar si reinstala SiteProof.
+    </p>
+    <p>
+      Google conserva los datos de an&aacute;lisis y de fallos que ya se hayan enviado (Secci&oacute;n 4) conforme a la configuraci&oacute;n
+      de retenci&oacute;n de datos de Firebase. Como estos datos solo est&aacute;n vinculados a identificadores aleatorios, y no a su nombre
+      ni a su correo electr&oacute;nico, por lo general no podemos saber qu&eacute; registros son suyos; puede detener la recopilaci&oacute;n
+      de nuevos datos en cualquier momento en <strong>Ajustes &rarr; Datos y privacidad</strong>.
     </p>
 
     <h2>11. Base legal para el procesamiento (RGPD)</h2>
@@ -633,19 +681,21 @@
       <li><strong>Inter&eacute;s leg&iacute;timo:</strong> Proporcionar la funcionalidad principal de la aplicaci&oacute;n, como el almacenamiento local de datos, la verificaci&oacute;n criptogr&aacute;fica y la generaci&oacute;n de informes.</li>
     </ul>
 
-    <h2>12. Sus derechos (usuarios UE/EEE)</h2>
+    <h2>12. Sus derechos (UE/EEE, Reino Unido y Suiza)</h2>
     <p>
-      Seg&uacute;n el Reglamento General de Protecci&oacute;n de Datos (RGPD), tiene derecho a acceder,
-      rectificar, borrar, limitar el procesamiento y solicitar la portabilidad de sus datos personales.
+      Seg&uacute;n el Reglamento General de Protecci&oacute;n de Datos (RGPD), el RGPD del Reino Unido y la Ley Federal de Protecci&oacute;n
+      de Datos de Suiza, tiene derecho a acceder, rectificar, borrar, limitar el procesamiento y solicitar la portabilidad
+      de sus datos personales.
     </p>
     <p>
-      Dado que SiteProof almacena todos los datos localmente en su dispositivo y no tiene acceso a ellos,
-      usted ejerce estos derechos directamente:
+      El contenido que usted crea en SiteProof permanece en su dispositivo y no tenemos acceso a &eacute;l,
+      por lo que usted ejerce estos derechos directamente:
     </p>
     <ul>
       <li><strong>Acceso y portabilidad:</strong> Utilice las funciones de exportaci&oacute;n de la aplicaci&oacute;n para recuperar sus datos en cualquier momento.</li>
       <li><strong>Borrado:</strong> Elimine trabajos individuales en la aplicaci&oacute;n, o elimine la aplicaci&oacute;n por completo para eliminar todos los datos.</li>
       <li><strong>Limitaci&oacute;n y rectificaci&oacute;n:</strong> Edite o gestione sus datos directamente dentro de la aplicaci&oacute;n.</li>
+      <li><strong>Datos de an&aacute;lisis y de fallos:</strong> Retire su consentimiento en cualquier momento en <strong>Ajustes &rarr; Datos y privacidad</strong>. Dado que estos datos solo est&aacute;n vinculados a identificadores aleatorios, es posible que no podamos identificar los registros que le conciernen, pero le ayudaremos en la medida de lo posible.</li>
     </ul>
     <p>
       Si tiene preguntas sobre el ejercicio de sus derechos, cont&aacute;ctenos en
@@ -710,11 +760,12 @@
       Alle in SiteProof erstellten Daten werden lokal auf Ihrem Ger&auml;t gespeichert, darunter:
     </p>
     <ul>
-      <li>Fotos, die Sie in der App aufnehmen</li>
+      <li>Fotos, die Sie in der App aufnehmen oder aus Ihrer Fotomediathek importieren</li>
       <li>Auftragsdetails (Titel, Notizen, Zeitstempel, Standorte)</li>
-      <li>Vorher-Nachher-Vergleiche</li>
+      <li>Vorher-Nachher-Vergleiche und Ihre Auswahl f&uuml;r den Showroom</li>
       <li>Erstellte Berichte und Exporte</li>
       <li>Kundenunterschriften (wenn Sie die Abnahmefunktion verwenden)</li>
+      <li>Der Markenauftritt Ihres Unternehmens, sofern Sie ihn hinzuf&uuml;gen (Logo, Firmenname, Telefon, E-Mail und Website)</li>
     </ul>
     <p>
       Diese Daten werden an keinen Server &uuml;bertragen und verbleiben unter Ihrer Kontrolle.
@@ -765,8 +816,12 @@
       <li>Adressen automatisch auszuf&uuml;llen</li>
     </ul>
     <p>
-      Standortdaten werden nur auf dem Ger&auml;t verwendet und niemals extern &uuml;bertragen oder gespeichert.
-      Sie k&ouml;nnen den Standortzugriff jederzeit in den Einstellungen Ihres Ger&auml;ts deaktivieren.
+      Um einen Standort in eine Stra&szlig;enadresse umzuwandeln, sendet SiteProof die Koordinaten an den Geocodierungsdienst
+      von Apple, der Teil von iOS ist; f&uuml;r die Verarbeitung dieser Anfrage durch Apple gilt die Datenschutzrichtlinie von Apple.
+      Abgesehen davon &uuml;bertr&auml;gt oder speichert SiteProof Ihren Standort nicht au&szlig;erhalb Ihres Ger&auml;ts, und der Standort wird
+      niemals in die Analysedaten aufgenommen.
+      Sie k&ouml;nnen die Standortmarkierung in der App ausschalten (<strong>Einstellungen &rarr; Automatische GPS-Markierung</strong>)
+      oder den Standortzugriff jederzeit in den Einstellungen Ihres Ger&auml;ts deaktivieren.
     </p>
 
     <h2>6. Fotos und Kamerazugriff</h2>
@@ -775,9 +830,11 @@
     </p>
     <ul>
       <li>Vorher- und Nachher-Fotos aufzunehmen</li>
-      <li>Generierte Bilder und Berichte zu speichern</li>
+      <li>Fotos Ihrer Wahl zu importieren, etwa ein Vorher- oder Nachher-Foto oder Ihr Firmenlogo &mdash; die Fotoauswahl des Systems gibt nur die Fotos weiter, die Sie ausw&auml;hlen</li>
+      <li>Generierte Bilder und Videos in Ihrer Fotomediathek zu speichern (hierf&uuml;r ist nur die Berechtigung zum Hinzuf&uuml;gen von Fotos erforderlich)</li>
     </ul>
     <p>
+      PDF-Berichte und Beweispakete werden nur dann in der Dateien-App gespeichert oder geteilt, wenn Sie sich daf&uuml;r entscheiden.
       Alle Bilder verbleiben auf Ihrem Ger&auml;t, es sei denn, Sie entscheiden sich, sie zu teilen.
     </p>
 
@@ -819,8 +876,16 @@
       <li>Die App von Ihrem Ger&auml;t entfernen</li>
     </ul>
     <p>
-      Das L&ouml;schen der App entfernt alle lokal gespeicherten Daten, einschlie&szlig;lich aller kryptografischen Schl&uuml;ssel
-      im Schl&uuml;sselbund.
+      Das L&ouml;schen der App entfernt die Fotos, Auftr&auml;ge und sonstigen Daten, die sie auf Ihrem Ger&auml;t speichert.
+      iOS kann den kryptografischen Signaturschl&uuml;ssel der App nach deren L&ouml;schung im Schl&uuml;sselbund behalten;
+      der Schl&uuml;ssel enth&auml;lt keine personenbezogenen Daten, verl&auml;sst niemals Ihr Ger&auml;t und wird wiederverwendet,
+      wenn Sie SiteProof erneut installieren.
+    </p>
+    <p>
+      Bereits &uuml;bermittelte Analyse- und Absturzdaten (Abschnitt 4) werden von Google gem&auml;&szlig; den Einstellungen zur
+      Datenaufbewahrung von Firebase aufbewahrt. Da sie nur mit zuf&auml;lligen Kennungen und nicht mit Ihrem Namen oder Ihrer
+      E-Mail-Adresse verkn&uuml;pft sind, k&ouml;nnen wir in der Regel nicht feststellen, welche Datens&auml;tze zu Ihnen geh&ouml;ren;
+      Sie k&ouml;nnen die weitere Erhebung jederzeit unter <strong>Einstellungen &rarr; Daten &amp; Datenschutz</strong> beenden.
     </p>
 
     <h2>11. Rechtsgrundlage f&uuml;r die Verarbeitung (DSGVO)</h2>
@@ -832,19 +897,21 @@
       <li><strong>Berechtigtes Interesse:</strong> Bereitstellung der Kernfunktionalit&auml;t der App wie lokale Datenspeicherung, kryptografische Verifizierung und Berichtserstellung.</li>
     </ul>
 
-    <h2>12. Ihre Rechte (EU-/EWR-Nutzer)</h2>
+    <h2>12. Ihre Rechte (EU/EWR, Vereinigtes K&ouml;nigreich und Schweiz)</h2>
     <p>
-      Gem&auml;&szlig; der Datenschutz-Grundverordnung (DSGVO) haben Sie das Recht auf Zugang,
-      Berichtigung, L&ouml;schung, Einschr&auml;nkung der Verarbeitung und Daten&uuml;bertragbarkeit Ihrer personenbezogenen Daten.
+      Gem&auml;&szlig; der Datenschutz-Grundverordnung (DSGVO), der UK-DSGVO und dem Schweizer Bundesgesetz &uuml;ber den Datenschutz (DSG)
+      haben Sie das Recht auf Zugang, Berichtigung, L&ouml;schung, Einschr&auml;nkung der Verarbeitung und Daten&uuml;bertragbarkeit
+      Ihrer personenbezogenen Daten.
     </p>
     <p>
-      Da SiteProof alle Daten lokal auf Ihrem Ger&auml;t speichert und keinen Zugriff darauf hat,
-      &uuml;ben Sie diese Rechte direkt aus:
+      Die Inhalte, die Sie in SiteProof erstellen, verbleiben auf Ihrem Ger&auml;t, und wir haben keinen Zugriff darauf;
+      daher &uuml;ben Sie diese Rechte direkt aus:
     </p>
     <ul>
       <li><strong>Zugang und &Uuml;bertragbarkeit:</strong> Verwenden Sie die Exportfunktionen der App, um Ihre Daten jederzeit abzurufen.</li>
       <li><strong>L&ouml;schung:</strong> L&ouml;schen Sie einzelne Auftr&auml;ge in der App oder entfernen Sie die App vollst&auml;ndig, um alle Daten zu l&ouml;schen.</li>
       <li><strong>Einschr&auml;nkung und Berichtigung:</strong> Bearbeiten oder verwalten Sie Ihre Daten direkt in der App.</li>
+      <li><strong>Analyse- und Absturzdaten:</strong> Widerrufen Sie Ihre Einwilligung jederzeit unter <strong>Einstellungen &rarr; Daten &amp; Datenschutz</strong>. Da diese Daten nur mit zuf&auml;lligen Kennungen verkn&uuml;pft sind, k&ouml;nnen wir die Sie betreffenden Datens&auml;tze m&ouml;glicherweise nicht identifizieren; wir helfen Ihnen jedoch, soweit uns dies m&ouml;glich ist.</li>
     </ul>
     <p>
       Wenn Sie Fragen zur Aus&uuml;bung Ihrer Rechte haben, kontaktieren Sie uns unter
@@ -909,11 +976,12 @@
       Todos os dados criados no SiteProof são armazenados localmente no seu dispositivo, incluindo:
     </p>
     <ul>
-      <li>As fotos que captura dentro da aplicação</li>
+      <li>As fotos que captura dentro da aplicação ou que importa da sua biblioteca de fotos</li>
       <li>Detalhes dos trabalhos (títulos, notas, datas e horas, localizações)</li>
-      <li>Comparações de antes e depois</li>
+      <li>Comparações de antes e depois e as suas seleções para o Showroom</li>
       <li>Relatórios e exportações gerados</li>
       <li>Assinaturas de clientes (caso utilize as funcionalidades de aprovação)</li>
+      <li>A identidade da marca da sua empresa, caso a adicione (logotipo, nome da empresa, telefone, e-mail e site)</li>
     </ul>
     <p>
       Estes dados não são transmitidos para qualquer servidor e permanecem sob o seu controlo.
@@ -964,8 +1032,12 @@
       <li>Preencher automaticamente endereços</li>
     </ul>
     <p>
-      Os dados de localização são utilizados apenas no dispositivo e nunca são transmitidos ou armazenados externamente.
-      Pode desativar o acesso à localização a qualquer momento nas definições do seu dispositivo.
+      Para converter uma localização numa morada, o SiteProof envia as coordenadas para o serviço de geocodificação da Apple,
+      que faz parte do iOS; o tratamento desse pedido pela Apple está abrangido pela Política de Privacidade da Apple.
+      Com exceção deste caso, o SiteProof não transmite nem armazena a sua localização fora do seu dispositivo, e a localização
+      nunca é incluída nas análises.
+      Pode desligar a marcação de localização na aplicação (<strong>Definições &rarr; Marcação GPS automática</strong>)
+      ou desativar o acesso à localização a qualquer momento nas definições do seu dispositivo.
     </p>
 
     <h2>6. Acesso às Fotos e à Câmara</h2>
@@ -974,9 +1046,11 @@
     </p>
     <ul>
       <li>Capturar fotos de antes e depois</li>
-      <li>Guardar imagens e relatórios gerados</li>
+      <li>Importar as fotos que escolher, como uma foto de antes ou de depois, ou o logotipo da sua empresa &mdash; o seletor de fotos do sistema partilha apenas as fotos que selecionar</li>
+      <li>Guardar imagens e vídeos gerados na sua biblioteca de fotos (para tal, apenas é necessária a permissão para adicionar fotos)</li>
     </ul>
     <p>
+      Os relatórios PDF e os pacotes de evidências só são guardados na aplicação Ficheiros ou partilhados quando assim o decidir.
       Todas as imagens permanecem no seu dispositivo, a menos que opte por partilhá-las.
     </p>
 
@@ -1018,8 +1092,16 @@
       <li>Remover a aplicação do seu dispositivo</li>
     </ul>
     <p>
-      A eliminação da aplicação removerá todos os dados armazenados localmente, incluindo quaisquer chaves criptográficas
-      armazenadas no Keychain.
+      A eliminação da aplicação remove as fotos, os trabalhos e os restantes dados que esta armazena no seu dispositivo.
+      O iOS pode manter a chave de assinatura criptográfica da aplicação no Keychain depois de a aplicação ser eliminada;
+      a chave não contém quaisquer informações pessoais, nunca sai do seu dispositivo e volta a ser utilizada se reinstalar
+      o SiteProof.
+    </p>
+    <p>
+      Os dados de análises e de falhas que já tenham sido enviados (Secção 4) são conservados pela Google de acordo com as
+      definições de retenção de dados do Firebase. Uma vez que estão associados apenas a identificadores aleatórios, e não ao
+      seu nome ou e-mail, em geral não conseguimos saber quais os registos que são seus; pode impedir novas recolhas a
+      qualquer momento em <strong>Definições &rarr; Dados e Privacidade</strong>.
     </p>
 
     <h2>11. Base Legal para o Processamento (RGPD)</h2>
@@ -1031,19 +1113,21 @@
       <li><strong>Interesse legítimo:</strong> Fornecer as funcionalidades essenciais da aplicação, tais como o armazenamento local de dados, a verificação criptográfica e a geração de relatórios.</li>
     </ul>
 
-    <h2>12. Os Seus Direitos (Utilizadores da UE/EEE)</h2>
+    <h2>12. Os Seus Direitos (UE/EEE, Reino Unido e Suíça)</h2>
     <p>
-      Ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD), tem o direito de aceder,
-      retificar, apagar, limitar o processamento e solicitar a portabilidade dos seus dados pessoais.
+      Ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD), do RGPD do Reino Unido e da Lei Federal de Proteção
+      de Dados da Suíça, tem o direito de aceder, retificar, apagar, limitar o processamento e solicitar a portabilidade
+      dos seus dados pessoais.
     </p>
     <p>
-      Uma vez que o SiteProof armazena todos os dados localmente no seu dispositivo e não tem acesso aos mesmos,
-      exerce estes direitos diretamente:
+      O conteúdo que cria no SiteProof permanece no seu dispositivo e não temos acesso ao mesmo,
+      pelo que exerce estes direitos diretamente:
     </p>
     <ul>
       <li><strong>Acesso e portabilidade:</strong> Utilize as funcionalidades de exportação da aplicação para recuperar os seus dados a qualquer momento.</li>
       <li><strong>Apagamento:</strong> Elimine trabalhos individuais na aplicação ou elimine a aplicação na totalidade para remover todos os dados.</li>
       <li><strong>Limitação e retificação:</strong> Edite ou faça a gestão dos seus dados diretamente dentro da aplicação.</li>
+      <li><strong>Dados de análises e de falhas:</strong> Retire o seu consentimento a qualquer momento em <strong>Definições &rarr; Dados e Privacidade</strong>. Uma vez que estes dados estão associados apenas a identificadores aleatórios, poderemos não conseguir identificar os registos que lhe dizem respeito, mas ajudaremos sempre que possível.</li>
     </ul>
     <p>
       Se tiver questões sobre o exercício dos seus direitos, contacte-nos através de
@@ -1108,11 +1192,12 @@
       SiteProof で作成されたすべてのデータは、以下を含め、お客様のデバイス内にローカルで保存されます。
     </p>
     <ul>
-      <li>アプリ内で撮影した写真</li>
+      <li>アプリ内で撮影した写真、または写真ライブラリからインポートした写真</li>
       <li>ジョブの詳細（タイトル、メモ、タイムスタンプ、位置情報）</li>
-      <li>作業前と作業後の比較</li>
+      <li>作業前と作業後の比較、およびショールーム用に選択した項目</li>
       <li>生成されたレポートおよびエクスポート</li>
       <li>お客様の署名（署名機能をご利用の場合）</li>
+      <li>お客様が追加した会社のブランディング（ロゴ、会社名、電話番号、メールアドレス、ウェブサイト）</li>
     </ul>
     <p>
       これらのデータがいかなるサーバーにも送信されることはなく、お客様の管理下にとどまります。
@@ -1163,8 +1248,11 @@
       <li>住所を自動的に入力する</li>
     </ul>
     <p>
-      位置情報データはデバイス上でのみ使用され、外部に送信または保存されることは決してありません。
-      位置情報へのアクセスは、お使いのデバイスの設定からいつでも無効にできます。
+      位置情報を住所に変換するため、SiteProof は iOS の一部である Apple のジオコーディングサービスに座標を送信します。
+      このリクエストの Apple による取り扱いには、Apple のプライバシーポリシーが適用されます。
+      上記を除き、SiteProof がお客様の位置情報をデバイスの外部に送信または保存することはなく、位置情報が分析データに含まれることも決してありません。
+      位置情報のタグ付けはアプリ内（<strong>設定 &rarr; GPS 自動タグ付け</strong>）でオフにできます。
+      また、位置情報へのアクセスは、お使いのデバイスの設定からいつでも無効にできます。
     </p>
 
     <h2>6. 写真およびカメラへのアクセス</h2>
@@ -1173,9 +1261,11 @@
     </p>
     <ul>
       <li>作業前および作業後の写真を撮影する</li>
-      <li>生成された画像およびレポートを保存する</li>
+      <li>作業前または作業後の写真や会社のロゴなど、お客様が選んだ写真をインポートする&mdash;システムの写真選択画面では、お客様が選択した写真のみが共有されます</li>
+      <li>生成された画像および動画を写真ライブラリに保存する（これに必要なのは写真を追加する許可のみです）</li>
     </ul>
     <p>
+      PDF レポートおよび証拠パッケージは、お客様が選択した場合にのみ、「ファイル」アプリに保存されるか、共有されます。
       すべての画像は、お客様が共有することを選択しない限り、お客様のデバイス内にとどまります。
     </p>
 
@@ -1217,8 +1307,14 @@
       <li>お使いのデバイスからアプリを削除する</li>
     </ul>
     <p>
-      アプリを削除すると、キーチェーンに保存された暗号鍵を含め、ローカルに保存されたすべてのデータが
-      削除されます。
+      アプリを削除すると、アプリがお客様のデバイスに保存している写真、ジョブ、その他のデータが削除されます。
+      iOS は、アプリの削除後も、アプリの署名用暗号鍵をキーチェーンに保持する場合があります。
+      この鍵には個人情報は含まれず、お客様のデバイスから外に出ることは決してなく、SiteProof を再インストールした場合には再び使用されます。
+    </p>
+    <p>
+      すでに送信された分析データおよびクラッシュデータ（第4項）は、Firebase のデータ保持設定に従って Google により保持されます。
+      これらのデータは、お名前やメールアドレスではなく、ランダムな識別子にのみ紐づけられているため、当社は通常、どの記録がお客様のものであるかを判別できません。
+      今後の収集は、<strong>設定 &rarr; データとプライバシー</strong>からいつでも停止できます。
     </p>
 
     <h2>11. 処理の法的根拠（GDPR）</h2>
@@ -1230,19 +1326,20 @@
       <li><strong>正当な利益:</strong> ローカルデータの保存、暗号学的検証、レポート生成といった本アプリの中核機能の提供。</li>
     </ul>
 
-    <h2>12. お客様の権利（EU／EEA のユーザー）</h2>
+    <h2>12. お客様の権利（EU／EEA、英国、およびスイス）</h2>
     <p>
-      一般データ保護規則（GDPR）に基づき、お客様には、ご自身の個人データへのアクセス、訂正、
+      一般データ保護規則（GDPR）、英国 GDPR、およびスイス連邦データ保護法に基づき、お客様には、ご自身の個人データへのアクセス、訂正、
       消去、処理の制限、およびデータポータビリティを請求する権利があります。
     </p>
     <p>
-      SiteProof はすべてのデータをお客様のデバイス内にローカルで保存しており、これにアクセスできないため、
+      お客様が SiteProof で作成したコンテンツはお客様のデバイス内にとどまり、当社はこれにアクセスできないため、
       お客様はこれらの権利を直接行使することになります。
     </p>
     <ul>
       <li><strong>アクセスおよびポータビリティ:</strong> アプリのエクスポート機能を使用して、いつでもご自身のデータを取得できます。</li>
       <li><strong>消去:</strong> アプリ内で個々のジョブを削除するか、すべてのデータを削除するためにアプリ自体を削除します。</li>
       <li><strong>制限および訂正:</strong> アプリ内で直接ご自身のデータを編集または管理します。</li>
+      <li><strong>分析データおよびクラッシュデータ:</strong> <strong>設定 &rarr; データとプライバシー</strong>から、いつでも同意を撤回できます。これらのデータはランダムな識別子にのみ紐づけられているため、当社がお客様に関する記録を特定できない場合がありますが、可能な範囲でお手伝いいたします。</li>
     </ul>
     <p>
       権利の行使についてご質問がある場合は、
@@ -1307,11 +1404,12 @@
       Wszystkie dane utworzone w aplikacji SiteProof są przechowywane lokalnie na Państwa urządzeniu, w tym:
     </p>
     <ul>
-      <li>Zdjęcia wykonane w aplikacji</li>
+      <li>Zdjęcia wykonane w aplikacji lub zaimportowane z biblioteki zdjęć</li>
       <li>Szczegóły zleceń (tytuły, notatki, znaczniki czasu, lokalizacje)</li>
-      <li>Porównania przed i po</li>
+      <li>Porównania przed i po oraz elementy wybrane przez Państwa do Showroomu</li>
       <li>Wygenerowane raporty i eksporty</li>
       <li>Podpisy klientów (w przypadku korzystania z funkcji akceptacji)</li>
+      <li>Branding Państwa firmy, jeśli go Państwo dodadzą (logo, nazwa firmy, telefon, e-mail i strona internetowa)</li>
     </ul>
     <p>
       Dane te nie są przesyłane na żaden serwer i pozostają pod Państwa kontrolą.
@@ -1362,8 +1460,12 @@
       <li>Automatycznie uzupełniać adresy</li>
     </ul>
     <p>
-      Dane o lokalizacji są wykorzystywane wyłącznie na urządzeniu i nigdy nie są przesyłane ani przechowywane na zewnątrz.
-      Dostęp do lokalizacji można wyłączyć w dowolnym momencie w ustawieniach urządzenia.
+      Aby zamienić lokalizację na adres pocztowy, SiteProof przesyła współrzędne do usługi geokodowania Apple, która jest
+      częścią systemu iOS; przetwarzanie tego żądania przez Apple podlega Polityce prywatności Apple.
+      Z wyjątkiem tego przypadku SiteProof nie przesyła ani nie przechowuje Państwa lokalizacji poza urządzeniem,
+      a lokalizacja nigdy nie jest uwzględniana w danych analitycznych.
+      Oznaczanie lokalizacji można wyłączyć w aplikacji (<strong>Ustawienia &rarr; Automatyczne tagowanie GPS</strong>)
+      lub w dowolnym momencie wyłączyć dostęp do lokalizacji w ustawieniach urządzenia.
     </p>
 
     <h2>6. Dostęp do zdjęć i aparatu</h2>
@@ -1372,9 +1474,11 @@
     </p>
     <ul>
       <li>Rejestrować zdjęcia przed i po</li>
-      <li>Zapisywać wygenerowane obrazy i raporty</li>
+      <li>Importować wybrane przez Państwa zdjęcia, takie jak zdjęcie przed lub po albo logo Państwa firmy &mdash; systemowe narzędzie wyboru zdjęć udostępnia wyłącznie zdjęcia zaznaczone przez Państwa</li>
+      <li>Zapisywać wygenerowane obrazy i filmy w bibliotece zdjęć (wymaga to wyłącznie uprawnienia do dodawania zdjęć)</li>
     </ul>
     <p>
+      Raporty PDF i pakiety dowodowe są zapisywane w aplikacji Pliki lub udostępniane wyłącznie wtedy, gdy Państwo tak zdecydują.
       Wszystkie obrazy pozostają na Państwa urządzeniu, chyba że zdecydują się Państwo je udostępnić.
     </p>
 
@@ -1416,8 +1520,17 @@
       <li>Usunięcie aplikacji z urządzenia</li>
     </ul>
     <p>
-      Usunięcie aplikacji spowoduje usunięcie wszystkich danych przechowywanych lokalnie, w tym wszelkich kluczy kryptograficznych
-      przechowywanych w Pęku kluczy.
+      Usunięcie aplikacji powoduje usunięcie zdjęć, zleceń i innych danych, które aplikacja przechowuje na Państwa urządzeniu.
+      System iOS może zachować kryptograficzny klucz podpisu aplikacji w Pęku kluczy po jej usunięciu; klucz ten nie zawiera
+      żadnych danych osobowych, nigdy nie opuszcza Państwa urządzenia i jest wykorzystywany ponownie w przypadku ponownej
+      instalacji SiteProof.
+    </p>
+    <p>
+      Dane analityczne i dane o awariach, które zostały już przesłane (Sekcja 4), są przechowywane przez Google zgodnie
+      z ustawieniami przechowywania danych w Firebase. Ponieważ są one powiązane wyłącznie z losowymi identyfikatorami,
+      a nie z Państwa imieniem i nazwiskiem czy adresem e-mail, zazwyczaj nie jesteśmy w stanie ustalić, które rekordy
+      dotyczą Państwa; dalsze zbieranie danych można zatrzymać w dowolnym momencie w sekcji
+      <strong>Ustawienia &rarr; Dane i prywatność</strong>.
     </p>
 
     <h2>11. Podstawa prawna przetwarzania (RODO)</h2>
@@ -1429,19 +1542,21 @@
       <li><strong>Prawnie uzasadniony interes:</strong> Zapewnianie podstawowych funkcji aplikacji, takich jak lokalne przechowywanie danych, weryfikacja kryptograficzna oraz generowanie raportów.</li>
     </ul>
 
-    <h2>12. Państwa prawa (Użytkownicy z UE/EOG)</h2>
+    <h2>12. Państwa prawa (UE/EOG, Wielka Brytania i Szwajcaria)</h2>
     <p>
-      Zgodnie z ogólnym rozporządzeniem o ochronie danych (RODO) przysługuje Państwu prawo dostępu do swoich danych osobowych,
-      ich sprostowania, usunięcia, ograniczenia przetwarzania oraz żądania ich przenoszenia.
+      Zgodnie z ogólnym rozporządzeniem o ochronie danych (RODO), brytyjskim RODO i szwajcarską ustawą federalną o ochronie danych
+      przysługuje Państwu prawo dostępu do swoich danych osobowych, ich sprostowania, usunięcia, ograniczenia przetwarzania
+      oraz żądania ich przenoszenia.
     </p>
     <p>
-      Ponieważ SiteProof przechowuje wszystkie dane lokalnie na Państwa urządzeniu i nie ma do nich dostępu,
-      prawa te wykonują Państwo bezpośrednio:
+      Treści tworzone przez Państwa w SiteProof pozostają na Państwa urządzeniu i nie mamy do nich dostępu,
+      dlatego prawa te wykonują Państwo bezpośrednio:
     </p>
     <ul>
       <li><strong>Dostęp i przenoszenie:</strong> Aby uzyskać swoje dane w dowolnym momencie, należy skorzystać z funkcji eksportu w aplikacji.</li>
       <li><strong>Usunięcie:</strong> Można usunąć pojedyncze zlecenia w aplikacji lub usunąć całą aplikację, aby usunąć wszystkie dane.</li>
       <li><strong>Ograniczenie i sprostowanie:</strong> Swoje dane można edytować i nimi zarządzać bezpośrednio w aplikacji.</li>
+      <li><strong>Dane analityczne i dane o awariach:</strong> Zgodę można wycofać w dowolnym momencie w sekcji <strong>Ustawienia &rarr; Dane i prywatność</strong>. Ponieważ dane te są powiązane wyłącznie z losowymi identyfikatorami, możemy nie być w stanie zidentyfikować rekordów, które Państwa dotyczą, ale w miarę możliwości udzielimy Państwu pomocy.</li>
     </ul>
     <p>
       W razie pytań dotyczących wykonywania swoich praw prosimy o kontakt pod adresem
@@ -1506,11 +1621,12 @@
       Все данные, создаваемые в SiteProof, хранятся локально на Вашем устройстве, в том числе:
     </p>
     <ul>
-      <li>Фотографии, которые Вы снимаете в приложении</li>
+      <li>Фотографии, которые Вы снимаете в приложении или импортируете из своей медиатеки</li>
       <li>Сведения о работах (названия, заметки, метки времени, местоположения)</li>
-      <li>Сравнения «до» и «после»</li>
+      <li>Сравнения «до» и «после», а также материалы, выбранные Вами для Showroom</li>
       <li>Созданные отчёты и экспортированные файлы</li>
       <li>Подписи клиентов (при использовании функций подписи)</li>
+      <li>Брендинг Вашей компании, если Вы его добавили (логотип, название компании, телефон, адрес электронной почты и веб-сайт)</li>
     </ul>
     <p>
       Эти данные не передаются на какой-либо сервер и остаются под Вашим контролем.
@@ -1543,7 +1659,7 @@
     <p><strong>Ваш контроль над аналитикой и отчётами о сбоях:</strong></p>
     <ul>
       <li>Если регион Вашего устройства находится в <strong>ЕС/ЕЭЗ, Великобритании или Швейцарии</strong>, аналитика и отчёты о сбоях <strong>по умолчанию отключены</strong> &mdash; ничего не собирается, пока Вы не дадите согласие через запрос, отображаемый при первом открытии приложения.</li>
-      <li>В других регионах они включены по умолчанию, и Вы можете отключить их в любой момент в разделе <strong>«Настройки &rarr; Данные и конфиденциальность &rarr; „Передавать данные об использовании и сбоях“».</strong></li>
+      <li>В других регионах они включены по умолчанию, и Вы можете отключить их в любой момент в разделе <strong>«Настройки &rarr; Данные и конфиденциальность &rarr; „Делиться данными об использовании и сбоях“».</strong></li>
     </ul>
     <p>
       Эта обработка осуществляется компанией Google, выступающей в качестве обработчика данных, и может происходить на серверах Google
@@ -1561,8 +1677,12 @@
       <li>Автоматически заполнять адреса</li>
     </ul>
     <p>
-      Данные о местоположении используются только на устройстве и никогда не передаются и не хранятся вовне.
-      Вы можете отключить доступ к местоположению в любой момент в настройках Вашего устройства.
+      Чтобы преобразовать местоположение в адрес, SiteProof отправляет координаты в службу геокодирования Apple, которая
+      является частью iOS; на обработку этого запроса компанией Apple распространяется Политика конфиденциальности Apple.
+      В остальных случаях SiteProof не передаёт и не хранит данные о Вашем местоположении за пределами Вашего устройства,
+      а местоположение никогда не включается в данные аналитики.
+      Вы можете отключить добавление меток местоположения в приложении (<strong>«Настройки &rarr; Автоматическая GPS-метка»</strong>)
+      или отключить доступ к местоположению в любой момент в настройках Вашего устройства.
     </p>
 
     <h2>6. Доступ к фотографиям и камере</h2>
@@ -1571,9 +1691,11 @@
     </p>
     <ul>
       <li>Снимать фотографии «до» и «после»</li>
-      <li>Сохранять созданные изображения и отчёты</li>
+      <li>Импортировать фотографии по Вашему выбору (например, фотографию «до» или «после» либо логотип Вашей компании) &mdash; системное окно выбора фотографий предоставляет только те фотографии, которые Вы выбрали</li>
+      <li>Сохранять созданные изображения и видео в медиатеку (для этого требуется только разрешение на добавление фотографий)</li>
     </ul>
     <p>
+      Сохранение PDF-отчётов и пакетов доказательств в приложение «Файлы» или их передача происходят только по Вашему выбору.
       Все изображения остаются на Вашем устройстве, если только Вы не решите ими поделиться.
     </p>
 
@@ -1615,8 +1737,16 @@
       <li>Удалив приложение с Вашего устройства</li>
     </ul>
     <p>
-      Удаление приложения приведёт к удалению всех локально хранящихся данных, включая любые криптографические ключи,
-      хранящиеся в Связке ключей.
+      Удаление приложения приводит к удалению фотографий, работ и других данных, которые оно хранит на Вашем устройстве.
+      iOS может сохранить криптографический ключ подписи приложения в Связке ключей и после удаления самого приложения;
+      этот ключ не содержит личной информации, никогда не покидает Ваше устройство и используется снова,
+      если Вы повторно установите SiteProof.
+    </p>
+    <p>
+      Уже отправленные данные аналитики и данные о сбоях (Раздел 4) хранятся компанией Google в соответствии с настройками
+      хранения данных Firebase. Поскольку эти данные связаны только со случайными идентификаторами, а не с Вашим именем или
+      адресом электронной почты, мы, как правило, не можем определить, какие записи относятся к Вам; Вы можете в любой момент
+      прекратить дальнейший сбор данных в разделе <strong>«Настройки &rarr; Данные и конфиденциальность»</strong>.
     </p>
 
     <h2>11. Правовое основание для обработки (GDPR)</h2>
@@ -1628,19 +1758,20 @@
       <li><strong>Законный интерес:</strong> Предоставление основных функций приложения, таких как локальное хранение данных, криптографическая проверка и создание отчётов.</li>
     </ul>
 
-    <h2>12. Ваши права (пользователи ЕС/ЕЭЗ)</h2>
+    <h2>12. Ваши права (ЕС/ЕЭЗ, Великобритания и Швейцария)</h2>
     <p>
-      В соответствии с Общим регламентом по защите данных (GDPR) Вы имеете право на доступ,
+      В соответствии с Общим регламентом по защите данных (GDPR), GDPR Великобритании и Федеральным законом Швейцарии о защите данных Вы имеете право на доступ,
       исправление, удаление, ограничение обработки и запрос переносимости Ваших персональных данных.
     </p>
     <p>
-      Поскольку SiteProof хранит все данные локально на Вашем устройстве и не имеет к ним доступа,
-      Вы реализуете эти права напрямую:
+      Контент, который Вы создаёте в SiteProof, остаётся на Вашем устройстве, и у нас нет к нему доступа,
+      поэтому Вы реализуете эти права напрямую:
     </p>
     <ul>
       <li><strong>Доступ и переносимость:</strong> Используйте функции экспорта приложения, чтобы получить свои данные в любой момент.</li>
       <li><strong>Удаление:</strong> Удалите отдельные работы в приложении или полностью удалите приложение, чтобы стереть все данные.</li>
       <li><strong>Ограничение и исправление:</strong> Редактируйте свои данные или управляйте ими непосредственно в приложении.</li>
+      <li><strong>Данные аналитики и данные о сбоях:</strong> Отзовите своё согласие в любой момент в разделе <strong>«Настройки &rarr; Данные и конфиденциальность»</strong>. Поскольку эти данные связаны только со случайными идентификаторами, мы, возможно, не сможем определить записи, относящиеся к Вам, однако окажем содействие в пределах наших возможностей.</li>
     </ul>
     <p>
       Если у Вас есть вопросы о реализации Ваших прав, свяжитесь с нами по адресу
@@ -1705,11 +1836,12 @@
       Semua data yang dibuat di SiteProof disimpan secara lokal di perangkat Anda, termasuk:
     </p>
     <ul>
-      <li>Foto yang Anda ambil di dalam aplikasi</li>
+      <li>Foto yang Anda ambil di dalam aplikasi atau Anda impor dari pustaka foto Anda</li>
       <li>Detail pekerjaan (judul, catatan, cap waktu, lokasi)</li>
-      <li>Perbandingan sebelum dan sesudah</li>
+      <li>Perbandingan sebelum dan sesudah serta pilihan Showroom Anda</li>
       <li>Laporan dan hasil ekspor yang dibuat</li>
       <li>Tanda tangan klien (jika menggunakan fitur persetujuan)</li>
+      <li>Branding perusahaan Anda, jika Anda menambahkannya (logo, nama perusahaan, nomor telepon, email, dan situs web)</li>
     </ul>
     <p>
       Data ini tidak dikirim ke server mana pun dan tetap berada dalam kendali Anda.
@@ -1760,8 +1892,12 @@
       <li>Mengisi alamat secara otomatis</li>
     </ul>
     <p>
-      Data lokasi hanya digunakan di perangkat dan tidak pernah dikirim atau disimpan secara eksternal.
-      Anda dapat menonaktifkan akses lokasi kapan saja di pengaturan perangkat Anda.
+      Untuk mengubah lokasi menjadi alamat jalan, SiteProof mengirimkan koordinat ke layanan geocoding Apple, yang merupakan
+      bagian dari iOS; penanganan permintaan tersebut oleh Apple tunduk pada Kebijakan Privasi Apple. Selain untuk keperluan
+      tersebut, SiteProof tidak mengirimkan atau menyimpan lokasi Anda di luar perangkat Anda, dan lokasi tidak pernah
+      disertakan dalam analitik.
+      Anda dapat menonaktifkan penandaan lokasi di aplikasi (<strong>Pengaturan &rarr; Penandaan GPS otomatis</strong>)
+      atau menonaktifkan akses lokasi kapan saja di pengaturan perangkat Anda.
     </p>
 
     <h2>6. Foto dan Akses Kamera</h2>
@@ -1770,9 +1906,11 @@
     </p>
     <ul>
       <li>Mengambil foto sebelum dan sesudah</li>
-      <li>Menyimpan gambar dan laporan yang dibuat</li>
+      <li>Mengimpor foto yang Anda pilih, seperti foto sebelum atau sesudah, atau logo perusahaan Anda &mdash; pemilih foto sistem hanya membagikan foto yang Anda pilih</li>
+      <li>Menyimpan gambar dan video yang dibuat ke pustaka foto Anda (ini hanya memerlukan izin untuk menambahkan foto)</li>
     </ul>
     <p>
+      Laporan PDF dan paket bukti hanya disimpan ke aplikasi File atau dibagikan jika Anda memilih untuk melakukannya.
       Semua gambar tetap berada di perangkat Anda kecuali Anda memilih untuk membagikannya.
     </p>
 
@@ -1814,8 +1952,16 @@
       <li>Menghapus aplikasi dari perangkat Anda</li>
     </ul>
     <p>
-      Menghapus aplikasi akan menghapus semua data yang tersimpan secara lokal, termasuk kunci kriptografis apa pun
-      yang tersimpan di Keychain.
+      Menghapus aplikasi akan menghapus foto, pekerjaan, dan data lain yang disimpannya di perangkat Anda.
+      iOS mungkin tetap menyimpan kunci penandatanganan kriptografis aplikasi di Keychain setelah aplikasi dihapus;
+      kunci tersebut tidak berisi informasi pribadi, tidak pernah meninggalkan perangkat Anda, dan akan digunakan kembali jika
+      Anda menginstal ulang SiteProof.
+    </p>
+    <p>
+      Data analitik dan kerusakan yang telah dikirim (Bagian 4) disimpan oleh Google sesuai dengan pengaturan retensi data
+      Firebase. Karena data tersebut hanya terhubung ke pengenal acak, bukan ke nama atau email Anda, kami umumnya tidak dapat
+      mengetahui catatan mana yang merupakan milik Anda; Anda dapat menghentikan pengumpulan lebih lanjut kapan saja di
+      <strong>Pengaturan &rarr; Data &amp; Privasi</strong>.
     </p>
 
     <h2>11. Dasar Hukum untuk Pemrosesan (GDPR)</h2>
@@ -1827,19 +1973,20 @@
       <li><strong>Kepentingan sah:</strong> Menyediakan fungsi inti aplikasi seperti penyimpanan data lokal, verifikasi kriptografis, dan pembuatan laporan.</li>
     </ul>
 
-    <h2>12. Hak Anda (Pengguna UE/EEA)</h2>
+    <h2>12. Hak Anda (UE/EEA, Britania Raya, dan Swiss)</h2>
     <p>
-      Berdasarkan Peraturan Perlindungan Data Umum (GDPR), Anda memiliki hak untuk mengakses,
+      Berdasarkan Peraturan Perlindungan Data Umum (GDPR), GDPR Britania Raya, dan Undang-Undang Federal Swiss tentang Perlindungan Data, Anda memiliki hak untuk mengakses,
       memperbaiki, menghapus, membatasi pemrosesan, dan meminta portabilitas data pribadi Anda.
     </p>
     <p>
-      Karena SiteProof menyimpan semua data secara lokal di perangkat Anda dan tidak memiliki akses ke data tersebut,
-      Anda menggunakan hak-hak ini secara langsung:
+      Konten yang Anda buat di SiteProof tetap berada di perangkat Anda dan kami tidak memiliki akses ke konten tersebut,
+      sehingga Anda menggunakan hak-hak ini secara langsung:
     </p>
     <ul>
       <li><strong>Akses dan portabilitas:</strong> Gunakan fitur ekspor aplikasi untuk mengambil data Anda kapan saja.</li>
       <li><strong>Penghapusan:</strong> Hapus pekerjaan satu per satu di aplikasi, atau hapus seluruh aplikasi untuk menghapus semua data.</li>
       <li><strong>Pembatasan dan perbaikan:</strong> Edit atau kelola data Anda langsung di dalam aplikasi.</li>
+      <li><strong>Data analitik dan kerusakan:</strong> Tarik persetujuan Anda kapan saja di <strong>Pengaturan &rarr; Data &amp; Privasi</strong>. Karena data ini hanya terhubung ke pengenal acak, kami mungkin tidak dapat mengidentifikasi catatan yang berkaitan dengan Anda, tetapi kami akan membantu sebisa mungkin.</li>
     </ul>
     <p>
       Jika Anda memiliki pertanyaan tentang penggunaan hak-hak Anda, hubungi kami di
@@ -1904,11 +2051,12 @@
       Ang lahat ng data na nilikha sa SiteProof ay naka-imbak nang lokal sa iyong device, kabilang ang:
     </p>
     <ul>
-      <li>Mga litratong kinukuha mo sa loob ng app</li>
+      <li>Mga litratong kinukuha mo sa loob ng app o ini-import mo mula sa iyong photo library</li>
       <li>Mga detalye ng job (mga pamagat, tala, timestamp, lokasyon)</li>
-      <li>Mga paghahambing bago at pagkatapos</li>
+      <li>Mga paghahambing bago at pagkatapos, pati na ang iyong mga pinili para sa Showroom</li>
       <li>Mga nalikhang report at export</li>
       <li>Mga lagda ng kliyente (kung gumagamit ng mga feature ng sign-off)</li>
+      <li>Ang branding ng iyong kumpanya, kung idaragdag mo ito (logo, pangalan ng kumpanya, telepono, email, at website)</li>
     </ul>
     <p>
       Ang data na ito ay hindi ipinapadala sa anumang server at nananatili sa ilalim ng iyong kontrol.
@@ -1941,7 +2089,7 @@
     <p><strong>Ang iyong kontrol sa analytics at crash reporting:</strong></p>
     <ul>
       <li>Kung ang rehiyon ng iyong device ay nasa <strong>EU/EEA, ang United Kingdom, o Switzerland</strong>, ang analytics at crash reporting ay <strong>naka-off bilang default</strong> &mdash; walang kinakalap maliban kung mag-opt in ka sa pamamagitan ng prompt ng pahintulot na ipinapakita kapag una mong binuksan ang app.</li>
-      <li>Sa iba pang rehiyon, naka-on ang mga ito bilang default, at maaari mo itong i-off anumang oras sa <strong>Settings &rarr; Data &amp; Privacy &rarr; &ldquo;Share Usage &amp; Crash Data.&rdquo;</strong></li>
+      <li>Sa iba pang rehiyon, naka-on ang mga ito bilang default, at maaari mo itong i-off anumang oras sa <strong>Mga setting &rarr; Data at Privacy &rarr; &ldquo;Ibahagi ang Data ng Paggamit at Pag-crash.&rdquo;</strong></li>
     </ul>
     <p>
       Ang pagproseso na ito ay isinasagawa ng Google na kumikilos bilang data processor at maaaring maganap sa mga server
@@ -1959,8 +2107,12 @@
       <li>Awtomatikong ipuno ang mga address</li>
     </ul>
     <p>
-      Ang data ng lokasyon ay ginagamit lamang sa device at hindi kailanman ipinapadala o iniimbak sa labas.
-      Maaari mong i-disable ang access sa lokasyon anumang oras sa mga setting ng iyong device.
+      Upang gawing street address ang isang lokasyon, ipinapadala ng SiteProof ang mga coordinate sa geocoding service ng
+      Apple, na bahagi ng iOS; ang paghawak ng Apple sa kahilingang iyon ay saklaw ng Patakaran sa Privacy ng Apple. Maliban
+      dito, hindi ipinapadala o iniimbak ng SiteProof ang iyong lokasyon sa labas ng iyong device, at hindi kailanman
+      isinasama ang lokasyon sa analytics.
+      Maaari mong i-off ang location tagging sa app (<strong>Mga setting &rarr; Awtomatikong GPS tagging</strong>)
+      o i-disable ang access sa lokasyon anumang oras sa mga setting ng iyong device.
     </p>
 
     <h2>6. Mga Litrato at Access sa Camera</h2>
@@ -1969,9 +2121,11 @@
     </p>
     <ul>
       <li>Kumuha ng mga litrato bago at pagkatapos</li>
-      <li>I-save ang mga nalikhang larawan at report</li>
+      <li>Mag-import ng mga litratong pipiliin mo, gaya ng isang litrato bago o pagkatapos, o ang logo ng iyong kumpanya &mdash; ibinabahagi lamang ng system photo picker ang mga litratong pinili mo</li>
+      <li>I-save ang mga nalikhang larawan at video sa iyong photo library (pahintulot lamang na magdagdag ng mga litrato ang kailangan nito)</li>
     </ul>
     <p>
+      Ang mga PDF report at evidence package ay sine-save sa Files app o ibinabahagi lamang kapag pinili mo.
       Ang lahat ng larawan ay nananatili sa iyong device maliban kung piliin mong ibahagi ang mga ito.
     </p>
 
@@ -2013,8 +2167,16 @@
       <li>Pag-alis ng app sa iyong device</li>
     </ul>
     <p>
-      Ang pagtanggal ng app ay mag-aalis ng lahat ng data na naka-imbak nang lokal, kabilang ang anumang cryptographic key
-      na naka-imbak sa Keychain.
+      Ang pagtanggal ng app ay nag-aalis ng mga litrato, mga job, at iba pang data na iniimbak nito sa iyong device.
+      Maaaring panatilihin ng iOS ang cryptographic signing key ng app sa Keychain matapos matanggal ang app;
+      walang personal na impormasyon ang key, hindi ito kailanman umaalis sa iyong device, at muli itong gagamitin kung
+      i-install mo muli ang SiteProof.
+    </p>
+    <p>
+      Ang analytics at crash data na naipadala na (Seksyon 4) ay pinapanatili ng Google alinsunod sa mga setting ng data
+      retention ng Firebase. Dahil naka-link lamang ito sa mga random na identifier, hindi sa iyong pangalan o email, sa
+      pangkalahatan ay hindi namin matukoy kung aling mga record ang sa iyo; maaari mong ihinto ang karagdagang pangangalap
+      anumang oras sa <strong>Mga setting &rarr; Data at Privacy</strong>.
     </p>
 
     <h2>11. Legal na Batayan para sa Pagproseso (GDPR)</h2>
@@ -2026,19 +2188,20 @@
       <li><strong>Lehitimong interes:</strong> Ang pagbibigay ng pangunahing functionality ng app tulad ng lokal na imbakan ng data, cryptographic verification, at paggawa ng report.</li>
     </ul>
 
-    <h2>12. Ang Iyong mga Karapatan (Mga User sa EU/EEA)</h2>
+    <h2>12. Ang Iyong mga Karapatan (EU/EEA, UK, at Switzerland)</h2>
     <p>
-      Sa ilalim ng General Data Protection Regulation (GDPR), may karapatan kang i-access,
+      Sa ilalim ng General Data Protection Regulation (GDPR), ng UK GDPR, at ng Swiss Federal Act on Data Protection, may karapatan kang i-access,
       itama, burahin, paghigpitan ang pagproseso ng, at humiling ng portability ng iyong personal na data.
     </p>
     <p>
-      Dahil iniimbak ng SiteProof ang lahat ng data nang lokal sa iyong device at walang access dito,
-      direkta mong isinasagawa ang mga karapatang ito:
+      Ang nilalamang nililikha mo sa SiteProof ay nananatili sa iyong device at wala kaming access dito,
+      kaya direkta mong isinasagawa ang mga karapatang ito:
     </p>
     <ul>
       <li><strong>Access at portability:</strong> Gamitin ang mga feature ng export ng app upang makuha ang iyong data anumang oras.</li>
       <li><strong>Pagbura:</strong> Tanggalin ang mga indibidwal na job sa app, o tanggalin nang buo ang app upang alisin ang lahat ng data.</li>
       <li><strong>Paghihigpit at pagtatama:</strong> I-edit o pamahalaan ang iyong data nang direkta sa loob ng app.</li>
+      <li><strong>Analytics at crash data:</strong> Bawiin ang iyong pahintulot anumang oras sa <strong>Mga setting &rarr; Data at Privacy</strong>. Dahil naka-link lamang ang data na ito sa mga random na identifier, maaaring hindi namin matukoy ang mga record na may kaugnayan sa iyo, ngunit tutulong kami hangga't maaari.</li>
     </ul>
     <p>
       Kung may mga tanong ka tungkol sa pagsasagawa ng iyong mga karapatan, makipag-ugnayan sa amin sa
@@ -2103,11 +2266,12 @@
       ข้อมูลทั้งหมดที่สร้างขึ้นใน SiteProof จะถูกจัดเก็บไว้ภายในอุปกรณ์ของคุณ ซึ่งรวมถึง:
     </p>
     <ul>
-      <li>ภาพถ่ายที่คุณถ่ายภายในแอป</li>
+      <li>ภาพถ่ายที่คุณถ่ายภายในแอปหรือนำเข้าจากคลังภาพของคุณ</li>
       <li>รายละเอียดงาน (ชื่อ บันทึก เวลา ตำแหน่ง)</li>
-      <li>ภาพเปรียบเทียบก่อนและหลัง</li>
+      <li>ภาพเปรียบเทียบก่อนและหลัง และรายการที่คุณเลือกไว้สำหรับ Showroom</li>
       <li>รายงานและไฟล์ที่ส่งออกที่สร้างขึ้น</li>
       <li>ลายเซ็นของลูกค้า (หากใช้ฟีเจอร์การลงนามรับรอง)</li>
+      <li>แบรนด์ของบริษัทคุณ หากคุณเพิ่มไว้ (โลโก้ ชื่อบริษัท หมายเลขโทรศัพท์ อีเมล และเว็บไซต์)</li>
     </ul>
     <p>
       ข้อมูลนี้จะไม่ถูกส่งไปยังเซิร์ฟเวอร์ใด ๆ และยังคงอยู่ภายใต้การควบคุมของคุณ
@@ -2158,8 +2322,11 @@
       <li>กรอกที่อยู่โดยอัตโนมัติ</li>
     </ul>
     <p>
-      ข้อมูลตำแหน่งใช้บนอุปกรณ์เท่านั้น และไม่เคยถูกส่งหรือจัดเก็บภายนอก
-      คุณสามารถปิดการเข้าถึงตำแหน่งได้ทุกเมื่อในการตั้งค่าอุปกรณ์ของคุณ
+      เพื่อแปลงตำแหน่งเป็นที่อยู่ SiteProof จะส่งพิกัดไปยังบริการ geocoding ของ Apple ซึ่งเป็นส่วนหนึ่งของ iOS
+      ทั้งนี้ การจัดการคำขอดังกล่าวของ Apple อยู่ภายใต้นโยบายความเป็นส่วนตัวของ Apple
+      นอกเหนือจากนี้ SiteProof จะไม่ส่งหรือจัดเก็บตำแหน่งของคุณไว้ภายนอกอุปกรณ์ของคุณ และจะไม่รวมตำแหน่งไว้ในการวิเคราะห์ข้อมูลเลย
+      คุณสามารถปิดการติดแท็กตำแหน่งได้ในแอป (<strong>การตั้งค่า &rarr; แท็ก GPS อัตโนมัติ</strong>)
+      หรือปิดการเข้าถึงตำแหน่งได้ทุกเมื่อในการตั้งค่าอุปกรณ์ของคุณ
     </p>
 
     <h2>6. ภาพถ่ายและการเข้าถึงกล้อง</h2>
@@ -2168,9 +2335,11 @@
     </p>
     <ul>
       <li>ถ่ายภาพก่อนและหลัง</li>
-      <li>บันทึกภาพและรายงานที่สร้างขึ้น</li>
+      <li>นำเข้าภาพถ่ายที่คุณเลือก เช่น ภาพก่อนหรือหลัง หรือโลโก้บริษัทของคุณ &mdash; หน้าต่างเลือกรูปภาพของระบบจะแชร์เฉพาะภาพที่คุณเลือกเท่านั้น</li>
+      <li>บันทึกภาพและวิดีโอที่สร้างขึ้นลงในคลังภาพของคุณ (การดำเนินการนี้ต้องใช้เพียงสิทธิ์ในการเพิ่มรูปภาพเท่านั้น)</li>
     </ul>
     <p>
+      รายงาน PDF และชุดหลักฐานจะถูกบันทึกลงในแอปไฟล์หรือแชร์ก็ต่อเมื่อคุณเลือกเท่านั้น
       ภาพทั้งหมดจะยังคงอยู่บนอุปกรณ์ของคุณ เว้นแต่คุณจะเลือกแชร์
     </p>
 
@@ -2212,8 +2381,14 @@
       <li>การลบแอปออกจากอุปกรณ์ของคุณ</li>
     </ul>
     <p>
-      การลบแอปจะลบข้อมูลที่จัดเก็บไว้ภายในเครื่องทั้งหมด รวมถึงคีย์เชิงรหัสลับใด ๆ
-      ที่จัดเก็บไว้ใน Keychain
+      การลบแอปจะลบภาพถ่าย งาน และข้อมูลอื่น ๆ ที่แอปจัดเก็บไว้บนอุปกรณ์ของคุณ
+      iOS อาจยังคงเก็บคีย์เชิงรหัสลับสำหรับการลงนามของแอปไว้ใน Keychain หลังจากที่ลบแอปแล้ว
+      คีย์ดังกล่าวไม่มีข้อมูลส่วนบุคคล จะไม่ออกจากอุปกรณ์ของคุณ และจะถูกนำกลับมาใช้อีกครั้งหากคุณติดตั้ง SiteProof ใหม่
+    </p>
+    <p>
+      ข้อมูลการวิเคราะห์และข้อมูลข้อขัดข้องที่ส่งไปแล้ว (ส่วนที่ 4) จะถูกเก็บรักษาโดย Google ตามการตั้งค่าการเก็บรักษาข้อมูลของ Firebase
+      เนื่องจากข้อมูลดังกล่าวผูกกับตัวระบุแบบสุ่มเท่านั้น ไม่ใช่ชื่อหรืออีเมลของคุณ โดยทั่วไปเราจึงไม่สามารถระบุได้ว่ารายการข้อมูลใดเป็นของคุณ
+      คุณสามารถหยุดการเก็บข้อมูลเพิ่มเติมได้ทุกเมื่อใน<strong>การตั้งค่า &rarr; ข้อมูลและความเป็นส่วนตัว</strong>
     </p>
 
     <h2>11. ฐานทางกฎหมายสำหรับการประมวลผล (GDPR)</h2>
@@ -2225,19 +2400,20 @@
       <li><strong>ผลประโยชน์อันชอบธรรม:</strong> การจัดให้มีฟังก์ชันหลักของแอป เช่น การจัดเก็บข้อมูลภายในเครื่อง การตรวจสอบเชิงรหัสลับ และการสร้างรายงาน</li>
     </ul>
 
-    <h2>12. สิทธิของคุณ (ผู้ใช้ในสหภาพยุโรป/เขตเศรษฐกิจยุโรป)</h2>
+    <h2>12. สิทธิของคุณ (สหภาพยุโรป/เขตเศรษฐกิจยุโรป สหราชอาณาจักร และสวิตเซอร์แลนด์)</h2>
     <p>
-      ภายใต้ระเบียบว่าด้วยการคุ้มครองข้อมูลทั่วไป (GDPR) คุณมีสิทธิ์เข้าถึง
+      ภายใต้ระเบียบว่าด้วยการคุ้มครองข้อมูลทั่วไป (GDPR), GDPR ของสหราชอาณาจักร และรัฐบัญญัติสหพันธรัฐสวิสว่าด้วยการคุ้มครองข้อมูล คุณมีสิทธิ์เข้าถึง
       แก้ไข ลบ จำกัดการประมวลผล และขอให้โอนย้ายข้อมูลส่วนบุคคลของคุณได้
     </p>
     <p>
-      เนื่องจาก SiteProof จัดเก็บข้อมูลทั้งหมดไว้ภายในอุปกรณ์ของคุณและไม่มีสิทธิ์เข้าถึง
+      เนื้อหาที่คุณสร้างใน SiteProof จะยังคงอยู่บนอุปกรณ์ของคุณ และเราไม่สามารถเข้าถึงเนื้อหาดังกล่าวได้
       คุณจึงใช้สิทธิ์เหล่านี้ได้โดยตรง:
     </p>
     <ul>
       <li><strong>การเข้าถึงและการโอนย้าย:</strong> ใช้ฟีเจอร์การส่งออกของแอปเพื่อดึงข้อมูลของคุณได้ทุกเมื่อ</li>
       <li><strong>การลบ:</strong> ลบงานแต่ละรายการในแอป หรือลบแอปทั้งหมดเพื่อลบข้อมูลทั้งหมด</li>
       <li><strong>การจำกัดและการแก้ไข:</strong> แก้ไขหรือจัดการข้อมูลของคุณได้โดยตรงภายในแอป</li>
+      <li><strong>ข้อมูลการวิเคราะห์และข้อมูลข้อขัดข้อง:</strong> ถอนความยินยอมของคุณได้ทุกเมื่อใน<strong>การตั้งค่า &rarr; ข้อมูลและความเป็นส่วนตัว</strong> เนื่องจากข้อมูลนี้ผูกกับตัวระบุแบบสุ่มเท่านั้น เราจึงอาจไม่สามารถระบุรายการข้อมูลที่เกี่ยวข้องกับคุณได้ แต่เราจะให้ความช่วยเหลือเท่าที่ทำได้</li>
     </ul>
     <p>
       หากคุณมีคำถามเกี่ยวกับการใช้สิทธิ์ของคุณ โปรดติดต่อเราที่

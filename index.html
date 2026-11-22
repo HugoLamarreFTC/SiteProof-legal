@@ -130,6 +130,12 @@
       SiteProof does not upload your data to the cloud.
       The app does not operate any backend servers or remote databases.
     </p>
+    <p>
+      The one exception is the cryptographic signing key described in Section 7:
+      if you use iCloud Keychain, iOS also keeps a copy of that key there.
+      iCloud Keychain is Apple's service, tied to your own Apple Account and
+      end-to-end encrypted. We have no access to it.
+    </p>
 
     <h2>4. Analytics &amp; Crash Reporting</h2>
     <p>
@@ -199,13 +205,16 @@
     </p>
     <ul>
       <li>Photos and video clips are processed using cryptographic hash functions (SHA-256) to generate tamper-evident fingerprints</li>
-      <li>HMAC signatures are created using a device-local key stored securely in the iOS Keychain</li>
+      <li>HMAC signatures are created using a key generated on your device and stored securely in the iOS Keychain</li>
       <li>A client sign-off seals the fingerprints of every photo and video clip in the job</li>
       <li>All verification data is stored locally on your device</li>
     </ul>
     <p>
-      This process is performed entirely on-device. The cryptographic key never leaves your device
-      and is not transmitted to any external service.
+      This process is performed entirely on-device. The cryptographic key is never sent to us or
+      to any service of ours. If you use iCloud Keychain, iOS also keeps a copy of the key there,
+      so that signatures made on one device can still be checked after you move to a new one.
+      That copy is end-to-end encrypted by Apple and available only to devices signed in to your
+      Apple Account.
     </p>
 
     <h2>8. In-App Purchases</h2>
@@ -234,8 +243,9 @@
     <p>
       Deleting the app removes the photos, jobs, and other data it stores on your device.
       iOS may keep the app's cryptographic signing key in the Keychain after the app is deleted;
-      the key contains no personal information, never leaves your device, and is used again if
-      you reinstall SiteProof.
+      the key contains no personal information, is never sent to us, and is used again if
+      you reinstall SiteProof. If you use iCloud Keychain, a copy of the key is kept there as
+      well (Section 7).
     </p>
     <p>
       Analytics and crash data that has already been sent (Section 4) is kept by Google under
@@ -349,6 +359,9 @@
       SiteProof ne t&eacute;l&eacute;verse pas vos donn&eacute;es vers le nuage.
       L'application n'utilise aucun serveur distant ni base de donn&eacute;es externe.
     </p>
+    <p>
+      L'unique exception est la cl&eacute; de signature cryptographique d&eacute;crite &agrave; la section 7&nbsp;: si vous utilisez le Trousseau iCloud, iOS en conserve aussi une copie. Le Trousseau iCloud est un service d'Apple, associ&eacute; &agrave; votre propre compte Apple et chiffr&eacute; de bout en bout. Nous n'y avons aucun acc&egrave;s.
+    </p>
 
     <h2>4. Analyse et rapports de plantage</h2>
     <p>
@@ -418,13 +431,12 @@
     </p>
     <ul>
       <li>Les photos et les clips vid&eacute;o sont trait&eacute;s &agrave; l'aide de fonctions de hachage cryptographiques (SHA-256) pour g&eacute;n&eacute;rer des empreintes infalsifiables</li>
-      <li>Des signatures HMAC sont cr&eacute;&eacute;es &agrave; l'aide d'une cl&eacute; locale stock&eacute;e de mani&egrave;re s&eacute;curis&eacute;e dans le trousseau iOS</li>
+      <li>Des signatures HMAC sont cr&eacute;&eacute;es &agrave; l'aide d'une cl&eacute; g&eacute;n&eacute;r&eacute;e sur votre appareil et stock&eacute;e de mani&egrave;re s&eacute;curis&eacute;e dans le trousseau iOS</li>
       <li>Une approbation client scelle les empreintes de toutes les photos et de tous les clips vid&eacute;o du chantier</li>
       <li>Toutes les donn&eacute;es de v&eacute;rification sont stock&eacute;es localement sur votre appareil</li>
     </ul>
     <p>
-      Ce processus est enti&egrave;rement r&eacute;alis&eacute; sur l'appareil. La cl&eacute; cryptographique ne quitte jamais votre appareil
-      et n'est transmise &agrave; aucun service externe.
+      Ce processus est enti&egrave;rement r&eacute;alis&eacute; sur l'appareil. Nous ne recevons jamais la cl&eacute; cryptographique, et elle n'est transmise &agrave; aucun de nos services. Si vous utilisez le Trousseau iCloud, iOS en conserve aussi une copie, afin que les signatures cr&eacute;&eacute;es sur un appareil puissent encore &ecirc;tre v&eacute;rifi&eacute;es apr&egrave;s votre passage &agrave; un nouvel appareil. Cette copie est chiffr&eacute;e de bout en bout par Apple et n'est accessible qu'aux appareils connect&eacute;s &agrave; votre compte Apple.
     </p>
 
     <h2>8. Achats int&eacute;gr&eacute;s</h2>
@@ -453,8 +465,7 @@
     <p>
       La suppression de l'application entra&icirc;ne la suppression des photos, des chantiers et des autres donn&eacute;es qu'elle stocke sur votre appareil.
       iOS peut conserver la cl&eacute; de signature cryptographique de l'application dans le trousseau une fois l'application supprim&eacute;e ;
-      cette cl&eacute; ne contient aucune information personnelle, ne quitte jamais votre appareil et est r&eacute;utilis&eacute;e si vous
-      r&eacute;installez SiteProof.
+      cette cl&eacute; ne contient aucune information personnelle, ne nous est jamais envoy&eacute;e et est r&eacute;utilis&eacute;e si vous r&eacute;installez SiteProof. Si vous utilisez le Trousseau iCloud, une copie de la cl&eacute; y est &eacute;galement conserv&eacute;e (section 7).
     </p>
     <p>
       Les donn&eacute;es d'analyse et de plantage d&eacute;j&agrave; envoy&eacute;es (section 4) sont conserv&eacute;es par Google conform&eacute;ment aux param&egrave;tres
@@ -568,6 +579,9 @@
       SiteProof no sube sus datos a la nube.
       La aplicaci&oacute;n no opera ning&uacute;n servidor remoto ni base de datos externa.
     </p>
+    <p>
+      La &uacute;nica excepci&oacute;n es la clave de firma criptogr&aacute;fica descrita en la Secci&oacute;n 7: si utiliza el llavero de iCloud, iOS tambi&eacute;n guarda all&iacute; una copia de esa clave. El llavero de iCloud es un servicio de Apple, vinculado a su propia cuenta de Apple y cifrado de extremo a extremo. Nosotros no tenemos acceso a &eacute;l.
+    </p>
 
     <h2>4. An&aacute;lisis e informes de fallos</h2>
     <p>
@@ -637,13 +651,12 @@
     </p>
     <ul>
       <li>Las fotos y los clips de video se procesan mediante funciones de hash criptogr&aacute;fico (SHA-256) para generar huellas a prueba de manipulaci&oacute;n</li>
-      <li>Se crean firmas HMAC utilizando una clave local almacenada de forma segura en el llavero de iOS</li>
+      <li>Se crean firmas HMAC utilizando una clave generada en su dispositivo y almacenada de forma segura en el llavero de iOS</li>
       <li>Una aprobaci&oacute;n del cliente sella las huellas de todas las fotos y todos los clips de video del trabajo</li>
       <li>Todos los datos de verificaci&oacute;n se almacenan localmente en su dispositivo</li>
     </ul>
     <p>
-      Este proceso se realiza completamente en el dispositivo. La clave criptogr&aacute;fica nunca sale de su dispositivo
-      y no se transmite a ning&uacute;n servicio externo.
+      Este proceso se realiza completamente en el dispositivo. La clave criptogr&aacute;fica nunca se nos env&iacute;a ni se transmite a ning&uacute;n servicio nuestro. Si utiliza el llavero de iCloud, iOS tambi&eacute;n guarda all&iacute; una copia de la clave, para que las firmas creadas en un dispositivo puedan seguir comprob&aacute;ndose despu&eacute;s de pasar a uno nuevo. Apple cifra esa copia de extremo a extremo y solo est&aacute; disponible en los dispositivos con la sesi&oacute;n iniciada en su cuenta de Apple.
     </p>
 
     <h2>8. Compras dentro de la aplicaci&oacute;n</h2>
@@ -672,7 +685,7 @@
     <p>
       Eliminar la aplicaci&oacute;n borra las fotos, los trabajos y los dem&aacute;s datos que esta almacena en su dispositivo.
       iOS puede conservar la clave de firma criptogr&aacute;fica de la aplicaci&oacute;n en el llavero una vez eliminada la aplicaci&oacute;n;
-      la clave no contiene informaci&oacute;n personal, nunca sale de su dispositivo y se vuelve a utilizar si reinstala SiteProof.
+      la clave no contiene informaci&oacute;n personal, no se nos env&iacute;a nunca y se vuelve a utilizar si reinstala SiteProof. Si utiliza el llavero de iCloud, tambi&eacute;n se guarda all&iacute; una copia de la clave (Secci&oacute;n 7).
     </p>
     <p>
       Google conserva los datos de an&aacute;lisis y de fallos que ya se hayan enviado (Secci&oacute;n 4) conforme a la configuraci&oacute;n
@@ -786,6 +799,9 @@
       SiteProof l&auml;dt Ihre Daten nicht in die Cloud hoch.
       Die App betreibt keine Remote-Server oder externen Datenbanken.
     </p>
+    <p>
+      Die einzige Ausnahme ist der in Abschnitt 7 beschriebene kryptografische Signaturschl&uuml;ssel: Wenn Sie den iCloud-Schl&uuml;sselbund verwenden, bewahrt iOS dort auch eine Kopie dieses Schl&uuml;ssels auf. Der iCloud-Schl&uuml;sselbund ist ein Dienst von Apple, ist an Ihren eigenen Apple-Account gebunden und Ende-zu-Ende-verschl&uuml;sselt. Wir haben keinen Zugriff darauf.
+    </p>
 
     <h2>4. Analyse und Absturzberichte</h2>
     <p>
@@ -855,13 +871,12 @@
     </p>
     <ul>
       <li>Fotos und Videoclips werden mit kryptografischen Hashfunktionen (SHA-256) verarbeitet, um manipulationssichere Fingerabdr&uuml;cke zu erzeugen</li>
-      <li>HMAC-Signaturen werden mit einem ger&auml;telokalen Schl&uuml;ssel erstellt, der sicher im iOS-Schl&uuml;sselbund gespeichert ist</li>
+      <li>HMAC-Signaturen werden mit einem auf Ihrem Ger&auml;t erzeugten Schl&uuml;ssel erstellt, der sicher im iOS-Schl&uuml;sselbund gespeichert ist</li>
       <li>Eine Kundenfreigabe versiegelt die Fingerabdr&uuml;cke aller Fotos und Videoclips des Auftrags</li>
       <li>Alle Verifizierungsdaten werden lokal auf Ihrem Ger&auml;t gespeichert</li>
     </ul>
     <p>
-      Dieser Prozess wird vollst&auml;ndig auf dem Ger&auml;t durchgef&uuml;hrt. Der kryptografische Schl&uuml;ssel verl&auml;sst niemals Ihr Ger&auml;t
-      und wird an keinen externen Dienst &uuml;bermittelt.
+      Dieser Prozess wird vollst&auml;ndig auf dem Ger&auml;t durchgef&uuml;hrt. Der kryptografische Schl&uuml;ssel wird weder an uns noch an einen unserer Dienste gesendet. Wenn Sie den iCloud-Schl&uuml;sselbund verwenden, bewahrt iOS dort ebenfalls eine Kopie des Schl&uuml;ssels auf, damit Signaturen, die auf einem Ger&auml;t erstellt wurden, auch nach dem Wechsel zu einem neuen Ger&auml;t noch gepr&uuml;ft werden k&ouml;nnen. Diese Kopie wird von Apple Ende-zu-Ende-verschl&uuml;sselt und ist nur auf Ger&auml;ten verf&uuml;gbar, die bei Ihrem Apple-Account angemeldet sind.
     </p>
 
     <h2>8. In-App-K&auml;ufe</h2>
@@ -890,8 +905,7 @@
     <p>
       Das L&ouml;schen der App entfernt die Fotos, Auftr&auml;ge und sonstigen Daten, die sie auf Ihrem Ger&auml;t speichert.
       iOS kann den kryptografischen Signaturschl&uuml;ssel der App nach deren L&ouml;schung im Schl&uuml;sselbund behalten;
-      der Schl&uuml;ssel enth&auml;lt keine personenbezogenen Daten, verl&auml;sst niemals Ihr Ger&auml;t und wird wiederverwendet,
-      wenn Sie SiteProof erneut installieren.
+      der Schl&uuml;ssel enth&auml;lt keine personenbezogenen Daten, wird niemals an uns gesendet und wird wiederverwendet, wenn Sie SiteProof erneut installieren. Wenn Sie den iCloud-Schl&uuml;sselbund verwenden, wird dort ebenfalls eine Kopie des Schl&uuml;ssels aufbewahrt (Abschnitt 7).
     </p>
     <p>
       Bereits &uuml;bermittelte Analyse- und Absturzdaten (Abschnitt 4) werden von Google gem&auml;&szlig; den Einstellungen zur
@@ -1005,6 +1019,9 @@
       O SiteProof não carrega os seus dados para a nuvem.
       A aplicação não opera quaisquer servidores de retaguarda nem bases de dados remotas.
     </p>
+    <p>
+      A única exceção é a chave de assinatura criptográfica descrita na Secção 7: se utilizar o Porta-chaves iCloud, o iOS guarda também aí uma cópia dessa chave. O Porta-chaves iCloud é um serviço da Apple, associado à sua própria conta Apple e com encriptação de ponta a ponta. Não temos acesso ao mesmo.
+    </p>
 
     <h2>4. Análises e Relatórios de Falhas</h2>
     <p>
@@ -1074,13 +1091,12 @@
     </p>
     <ul>
       <li>As fotos e os clips de vídeo são processados utilizando funções criptográficas de resumo (SHA-256) para gerar impressões digitais à prova de adulteração</li>
-      <li>São criadas assinaturas HMAC utilizando uma chave local do dispositivo armazenada de forma segura no iOS Keychain</li>
+      <li>São criadas assinaturas HMAC utilizando uma chave gerada no seu dispositivo e armazenada de forma segura no iOS Keychain</li>
       <li>Uma aprovação do cliente sela as impressões digitais de todas as fotos e de todos os clips de vídeo do trabalho</li>
       <li>Todos os dados de verificação são armazenados localmente no seu dispositivo</li>
     </ul>
     <p>
-      Este processo é realizado inteiramente no dispositivo. A chave criptográfica nunca sai do seu dispositivo
-      e não é transmitida para qualquer serviço externo.
+      Este processo é realizado inteiramente no dispositivo. A chave criptográfica nunca é enviada para nós nem para qualquer serviço nosso. Se utilizar o Porta-chaves iCloud, o iOS guarda também aí uma cópia da chave, para que as assinaturas criadas num dispositivo possam continuar a ser verificadas depois de mudar para um novo. Essa cópia tem encriptação de ponta a ponta pela Apple e só está disponível nos dispositivos com sessão iniciada na sua conta Apple.
     </p>
 
     <h2>8. Compras Dentro da Aplicação</h2>
@@ -1109,8 +1125,7 @@
     <p>
       A eliminação da aplicação remove as fotos, os trabalhos e os restantes dados que esta armazena no seu dispositivo.
       O iOS pode manter a chave de assinatura criptográfica da aplicação no Keychain depois de a aplicação ser eliminada;
-      a chave não contém quaisquer informações pessoais, nunca sai do seu dispositivo e volta a ser utilizada se reinstalar
-      o SiteProof.
+      a chave não contém quaisquer informações pessoais, nunca é enviada para nós e volta a ser utilizada se reinstalar o SiteProof. Se utilizar o Porta-chaves iCloud, é também guardada aí uma cópia da chave (Secção 7).
     </p>
     <p>
       Os dados de análises e de falhas que já tenham sido enviados (Secção 4) são conservados pela Google de acordo com as
@@ -1224,6 +1239,9 @@
       SiteProof は、お客様のデータをクラウドにアップロードしません。
       本アプリは、バックエンドサーバーやリモートデータベースを一切運用していません。
     </p>
+    <p>
+      唯一の例外は、第7項で説明している暗号鍵（署名用の鍵）です。iCloudキーチェーンをご利用の場合、iOS はその鍵のコピーをそこにも保管します。iCloudキーチェーンは Apple のサービスであり、お客様ご自身の Apple アカウントに紐づけられ、エンドツーエンドで暗号化されています。当社はこれにアクセスできません。
+    </p>
 
     <h2>4. 分析 &amp; クラッシュレポート</h2>
     <p>
@@ -1291,12 +1309,12 @@
     </p>
     <ul>
       <li>写真と動画クリップは暗号学的ハッシュ関数（SHA-256）を用いて処理され、改ざんが検出可能な指紋が生成されます</li>
-      <li>HMAC 署名は、iOS キーチェーンに安全に保存されたデバイスローカルの鍵を使用して作成されます</li>
+      <li>HMAC 署名は、お客様のデバイス上で生成され、iOS キーチェーンに安全に保存された鍵を使用して作成されます</li>
       <li>クライアントの承認によって、案件内のすべての写真と動画クリップの指紋が封印されます</li>
       <li>すべての検証データは、お客様のデバイス内にローカルで保存されます</li>
     </ul>
     <p>
-      この処理は、すべてデバイス上で実行されます。暗号鍵がお客様のデバイスから外に出ることは決してなく、いかなる外部サービスにも送信されません。
+      この処理は、すべてデバイス上で実行されます。暗号鍵が当社や当社のいかなるサービスにも送信されることは決してありません。iCloudキーチェーンをご利用の場合、iOS は鍵のコピーをそこにも保管するため、あるデバイスで作成された署名は、新しいデバイスに移行した後も確認できます。このコピーは Apple によってエンドツーエンドで暗号化され、お客様の Apple アカウントにサインインしているデバイスでのみ利用できます。
     </p>
 
     <h2>8. アプリ内課金</h2>
@@ -1325,7 +1343,7 @@
     <p>
       アプリを削除すると、アプリがお客様のデバイスに保存している写真、ジョブ、その他のデータが削除されます。
       iOS は、アプリの削除後も、アプリの署名用暗号鍵をキーチェーンに保持する場合があります。
-      この鍵には個人情報は含まれず、お客様のデバイスから外に出ることは決してなく、SiteProof を再インストールした場合には再び使用されます。
+      この鍵には個人情報は含まれず、当社に送信されることは決してなく、SiteProof を再インストールした場合には再び使用されます。iCloudキーチェーンをご利用の場合は、鍵のコピーもそこに保管されます（第7項）。
     </p>
     <p>
       すでに送信された分析データおよびクラッシュデータ（第4項）は、Firebase のデータ保持設定に従って Google により保持されます。
@@ -1437,6 +1455,9 @@
       SiteProof nie przesyła Państwa danych do chmury.
       Aplikacja nie obsługuje żadnych serwerów zaplecza ani zdalnych baz danych.
     </p>
+    <p>
+      Jedynym wyjątkiem jest klucz podpisu kryptograficznego opisany w Sekcji 7: jeśli Państwo korzystają z Pęku kluczy iCloud, system iOS przechowuje tam również kopię tego klucza. Pęk kluczy iCloud to usługa firmy Apple, powiązana z Państwa własnym kontem Apple i szyfrowana metodą end-to-end. Nie mamy do niej dostępu.
+    </p>
 
     <h2>4. Analityka i raportowanie awarii</h2>
     <p>
@@ -1505,12 +1526,12 @@
     </p>
     <ul>
       <li>Zdjęcia i klipy filmowe są przetwarzane za pomocą kryptograficznych funkcji skrótu (SHA-256) w celu wygenerowania odpornych na manipulacje odcisków cyfrowych</li>
-      <li>Podpisy HMAC są tworzone przy użyciu klucza lokalnego dla urządzenia, bezpiecznie przechowywanego w Pęku kluczy iOS</li>
+      <li>Podpisy HMAC są tworzone przy użyciu klucza wygenerowanego na Państwa urządzeniu i bezpiecznie przechowywanego w Pęku kluczy iOS</li>
       <li>Akceptacja klienta pieczętuje odciski wszystkich zdjęć i klipów filmowych w zleceniu</li>
       <li>Wszystkie dane weryfikacyjne są przechowywane lokalnie na Państwa urządzeniu</li>
     </ul>
     <p>
-      Proces ten odbywa się w całości na urządzeniu. Klucz kryptograficzny nigdy nie opuszcza Państwa urządzenia i nie jest przesyłany do żadnej usługi zewnętrznej.
+      Proces ten odbywa się w całości na urządzeniu. Klucz kryptograficzny nigdy nie jest wysyłany do nas ani do żadnej z naszych usług. Jeśli Państwo korzystają z Pęku kluczy iCloud, system iOS przechowuje tam również kopię klucza, aby podpisy utworzone na jednym urządzeniu można było nadal sprawdzać po przejściu na nowe. Kopia ta jest szyfrowana przez Apple metodą end-to-end i dostępna wyłącznie na urządzeniach zalogowanych na Państwa konto Apple.
     </p>
 
     <h2>8. Zakupy w aplikacji</h2>
@@ -1539,8 +1560,7 @@
     <p>
       Usunięcie aplikacji powoduje usunięcie zdjęć, zleceń i innych danych, które aplikacja przechowuje na Państwa urządzeniu.
       System iOS może zachować kryptograficzny klucz podpisu aplikacji w Pęku kluczy po jej usunięciu; klucz ten nie zawiera
-      żadnych danych osobowych, nigdy nie opuszcza Państwa urządzenia i jest wykorzystywany ponownie w przypadku ponownej
-      instalacji SiteProof.
+      żadnych danych osobowych, nigdy nie jest wysyłany do nas i jest wykorzystywany ponownie w przypadku ponownej instalacji SiteProof. Jeśli Państwo korzystają z Pęku kluczy iCloud, kopia klucza jest tam również przechowywana (Sekcja 7).
     </p>
     <p>
       Dane analityczne i dane o awariach, które zostały już przesłane (Sekcja 4), są przechowywane przez Google zgodnie
@@ -1655,6 +1675,9 @@
       SiteProof не загружает Ваши данные в облако.
       Приложение не использует никаких серверных систем или удалённых баз данных.
     </p>
+    <p>
+      Единственное исключение — криптографический ключ подписи, описанный в Разделе 7: если Вы используете Связку ключей iCloud, iOS также хранит там копию этого ключа. Связка ключей iCloud — это сервис Apple, привязанный к Вашей собственной учётной записи Apple и использующий сквозное шифрование. У нас нет к ней доступа.
+    </p>
 
     <h2>4. Аналитика и отчёты о сбоях</h2>
     <p>
@@ -1723,12 +1746,12 @@
     </p>
     <ul>
       <li>Фотографии и видеоклипы обрабатываются с помощью криптографических хеш-функций (SHA-256) для создания отпечатков с защитой от подделки</li>
-      <li>Подписи HMAC создаются с использованием локального ключа устройства, надёжно хранящегося в Связке ключей iOS</li>
+      <li>Подписи HMAC создаются с использованием ключа, созданного на Вашем устройстве и надёжно хранящегося в Связке ключей iOS</li>
       <li>Одобрение клиента заверяет отпечатки всех фотографий и видеоклипов проекта</li>
       <li>Все данные проверки хранятся локально на Вашем устройстве</li>
     </ul>
     <p>
-      Этот процесс полностью выполняется на устройстве. Криптографический ключ никогда не покидает Ваше устройство и не передаётся какой-либо внешней службе.
+      Этот процесс полностью выполняется на устройстве. Криптографический ключ никогда не отправляется нам или какому-либо из наших сервисов. Если Вы используете Связку ключей iCloud, iOS также хранит там копию ключа, чтобы подписи, созданные на одном устройстве, можно было проверить и после перехода на новое. Эта копия защищена сквозным шифрованием Apple и доступна только на устройствах, выполнивших вход в Вашу учётную запись Apple.
     </p>
 
     <h2>8. Покупки внутри приложения</h2>
@@ -1757,8 +1780,7 @@
     <p>
       Удаление приложения приводит к удалению фотографий, работ и других данных, которые оно хранит на Вашем устройстве.
       iOS может сохранить криптографический ключ подписи приложения в Связке ключей и после удаления самого приложения;
-      этот ключ не содержит личной информации, никогда не покидает Ваше устройство и используется снова,
-      если Вы повторно установите SiteProof.
+      этот ключ не содержит личной информации, никогда не отправляется нам и используется снова, если Вы повторно установите SiteProof. Если Вы используете Связку ключей iCloud, там также хранится копия ключа (Раздел 7).
     </p>
     <p>
       Уже отправленные данные аналитики и данные о сбоях (Раздел 4) хранятся компанией Google в соответствии с настройками
@@ -1871,6 +1893,9 @@
       SiteProof tidak mengunggah data Anda ke awan.
       Aplikasi ini tidak mengoperasikan server backend atau basis data jarak jauh mana pun.
     </p>
+    <p>
+      Satu-satunya pengecualian adalah kunci penandatanganan kriptografis yang dijelaskan di Bagian 7: jika Anda menggunakan Rantai Kunci iCloud, iOS juga menyimpan salinan kunci tersebut di sana. Rantai Kunci iCloud adalah layanan Apple, terkait dengan Akun Apple Anda sendiri dan dienkripsi secara ujung ke ujung. Kami tidak memiliki akses ke sana.
+    </p>
 
     <h2>4. Analitik &amp; Pelaporan Kerusakan</h2>
     <p>
@@ -1940,13 +1965,12 @@
     </p>
     <ul>
       <li>Foto dan klip video diproses menggunakan fungsi hash kriptografis (SHA-256) untuk menghasilkan sidik jari yang menunjukkan bukti perubahan</li>
-      <li>Tanda tangan HMAC dibuat menggunakan kunci lokal perangkat yang disimpan dengan aman di iOS Keychain</li>
+      <li>Tanda tangan HMAC dibuat menggunakan kunci yang dibuat di perangkat Anda dan disimpan dengan aman di iOS Keychain</li>
       <li>Persetujuan klien menyegel sidik jari setiap foto dan klip video dalam pekerjaan tersebut</li>
       <li>Semua data verifikasi disimpan secara lokal di perangkat Anda</li>
     </ul>
     <p>
-      Proses ini dilakukan sepenuhnya di perangkat. Kunci kriptografis tidak pernah meninggalkan perangkat Anda
-      dan tidak dikirim ke layanan eksternal mana pun.
+      Proses ini dilakukan sepenuhnya di perangkat. Kunci kriptografis tidak pernah dikirim kepada kami atau ke layanan mana pun milik kami. Jika Anda menggunakan Rantai Kunci iCloud, iOS juga menyimpan salinan kunci tersebut di sana, sehingga tanda tangan yang dibuat di satu perangkat tetap dapat diperiksa setelah Anda pindah ke perangkat baru. Salinan itu dienkripsi secara ujung ke ujung oleh Apple dan hanya tersedia di perangkat yang masuk ke Akun Apple Anda.
     </p>
 
     <h2>8. Pembelian Dalam Aplikasi</h2>
@@ -1975,8 +1999,7 @@
     <p>
       Menghapus aplikasi akan menghapus foto, pekerjaan, dan data lain yang disimpannya di perangkat Anda.
       iOS mungkin tetap menyimpan kunci penandatanganan kriptografis aplikasi di Keychain setelah aplikasi dihapus;
-      kunci tersebut tidak berisi informasi pribadi, tidak pernah meninggalkan perangkat Anda, dan akan digunakan kembali jika
-      Anda menginstal ulang SiteProof.
+      kunci tersebut tidak berisi informasi pribadi, tidak pernah dikirim kepada kami, dan akan digunakan kembali jika Anda menginstal ulang SiteProof. Jika Anda menggunakan Rantai Kunci iCloud, salinan kunci juga disimpan di sana (Bagian 7).
     </p>
     <p>
       Data analitik dan kerusakan yang telah dikirim (Bagian 4) disimpan oleh Google sesuai dengan pengaturan retensi data
@@ -2089,6 +2112,9 @@
       Hindi ina-upload ng SiteProof ang iyong data sa cloud.
       Hindi nagpapatakbo ang app ng anumang backend server o remote database.
     </p>
+    <p>
+      Ang nag-iisang eksepsyon ay ang cryptographic signing key na inilarawan sa Seksyon 7: kung gumagamit ka ng iCloud Keychain, nagtatago rin ang iOS ng kopya ng key na iyon doon. Ang iCloud Keychain ay serbisyo ng Apple, naka-link sa sarili mong Apple Account at end-to-end encrypted. Wala kaming access dito.
+    </p>
 
     <h2>4. Analytics &amp; Crash Reporting</h2>
     <p>
@@ -2158,13 +2184,12 @@
     </p>
     <ul>
       <li>Pinoproseso ang mga litrato at video clip gamit ang mga cryptographic hash function (SHA-256) upang lumikha ng mga tamper-evident na fingerprint</li>
-      <li>Ginagawa ang mga HMAC signature gamit ang key na nasa device lamang na ligtas na naka-imbak sa iOS Keychain</li>
+      <li>Ginagawa ang mga HMAC signature gamit ang key na nilikha sa iyong device at ligtas na naka-imbak sa iOS Keychain</li>
       <li>Sine-seal ng client sign-off ang mga fingerprint ng bawat litrato at video clip sa trabaho</li>
       <li>Lahat ng verification data ay naka-imbak nang lokal sa iyong device</li>
     </ul>
     <p>
-      Ang prosesong ito ay isinasagawa nang buo sa device. Ang cryptographic key ay hindi kailanman umaalis sa iyong device
-      at hindi ipinapadala sa anumang panlabas na serbisyo.
+      Ang prosesong ito ay isinasagawa nang buo sa device. Ang cryptographic key ay hindi kailanman ipinapadala sa amin o sa anumang serbisyo namin. Kung gumagamit ka ng iCloud Keychain, nagtatago rin ang iOS ng kopya ng key doon, upang ang mga signature na ginawa sa isang device ay ma-check pa rin pagkatapos mong lumipat sa bago. Ang kopyang iyon ay end-to-end encrypted ng Apple at available lamang sa mga device na naka-sign in sa iyong Apple Account.
     </p>
 
     <h2>8. Mga In-App Purchase</h2>
@@ -2193,8 +2218,7 @@
     <p>
       Ang pagtanggal ng app ay nag-aalis ng mga litrato, mga job, at iba pang data na iniimbak nito sa iyong device.
       Maaaring panatilihin ng iOS ang cryptographic signing key ng app sa Keychain matapos matanggal ang app;
-      walang personal na impormasyon ang key, hindi ito kailanman umaalis sa iyong device, at muli itong gagamitin kung
-      i-install mo muli ang SiteProof.
+      walang personal na impormasyon ang key, hindi ito kailanman ipinapadala sa amin, at muli itong gagamitin kung i-install mo muli ang SiteProof. Kung gumagamit ka ng iCloud Keychain, may kopya rin ng key na itinatago roon (Seksyon 7).
     </p>
     <p>
       Ang analytics at crash data na naipadala na (Seksyon 4) ay pinapanatili ng Google alinsunod sa mga setting ng data
@@ -2307,6 +2331,9 @@
       SiteProof ไม่อัปโหลดข้อมูลของคุณไปยังคลาวด์
       แอปไม่ได้ดำเนินการเซิร์ฟเวอร์เบื้องหลังหรือฐานข้อมูลระยะไกลใด ๆ
     </p>
+    <p>
+      ข้อยกเว้นเพียงอย่างเดียวคือคีย์เชิงรหัสลับสำหรับการลงนามที่อธิบายไว้ในส่วนที่ 7 หากคุณใช้พวงกุญแจ iCloud iOS จะเก็บสำเนาของคีย์นั้นไว้ที่นั่นด้วย พวงกุญแจ iCloud เป็นบริการของ Apple ที่ผูกกับบัญชี Apple ของคุณเอง และเข้ารหัสแบบ end-to-end เราไม่สามารถเข้าถึงได้
+    </p>
 
     <h2>4. การวิเคราะห์ข้อมูล &amp; การรายงานข้อขัดข้อง</h2>
     <p>
@@ -2375,13 +2402,12 @@
     </p>
     <ul>
       <li>ภาพถ่ายและคลิปวิดีโอจะถูกประมวลผลโดยใช้ฟังก์ชันแฮชเชิงรหัสลับ (SHA-256) เพื่อสร้างลายนิ้วมือที่ตรวจพบการดัดแปลงได้</li>
-      <li>ลายเซ็น HMAC ถูกสร้างขึ้นโดยใช้คีย์เฉพาะอุปกรณ์ที่จัดเก็บอย่างปลอดภัยใน iOS Keychain (พวงกุญแจ iOS)</li>
+      <li>ลายเซ็น HMAC ถูกสร้างขึ้นโดยใช้คีย์ที่สร้างขึ้นบนอุปกรณ์ของคุณและจัดเก็บอย่างปลอดภัยใน iOS Keychain (พวงกุญแจ iOS)</li>
       <li>การลงนามรับรองของลูกค้าจะผนึกลายนิ้วมือดิจิทัลของภาพและคลิปวิดีโอทุกรายการในงาน</li>
       <li>ข้อมูลการตรวจสอบทั้งหมดจะถูกจัดเก็บไว้ภายในอุปกรณ์ของคุณ</li>
     </ul>
     <p>
-      กระบวนการนี้ดำเนินการบนอุปกรณ์ทั้งหมด คีย์เชิงรหัสลับจะไม่ออกจากอุปกรณ์ของคุณ
-      และจะไม่ถูกส่งไปยังบริการภายนอกใด ๆ
+      กระบวนการนี้ดำเนินการบนอุปกรณ์ทั้งหมด คีย์เชิงรหัสลับจะไม่ถูกส่งถึงเราหรือบริการใด ๆ ของเรา หากคุณใช้พวงกุญแจ iCloud iOS จะเก็บสำเนาของคีย์ไว้ที่นั่นด้วย เพื่อให้ลายเซ็นที่สร้างบนอุปกรณ์หนึ่งยังคงตรวจสอบได้หลังจากที่คุณย้ายไปใช้อุปกรณ์เครื่องใหม่ สำเนานั้นได้รับการเข้ารหัสแบบ end-to-end โดย Apple และใช้ได้เฉพาะบนอุปกรณ์ที่ลงชื่อเข้าใช้บัญชี Apple ของคุณ
     </p>
 
     <h2>8. การซื้อภายในแอป</h2>
@@ -2410,7 +2436,7 @@
     <p>
       การลบแอปจะลบภาพถ่าย งาน และข้อมูลอื่น ๆ ที่แอปจัดเก็บไว้บนอุปกรณ์ของคุณ
       iOS อาจยังคงเก็บคีย์เชิงรหัสลับสำหรับการลงนามของแอปไว้ใน Keychain หลังจากที่ลบแอปแล้ว
-      คีย์ดังกล่าวไม่มีข้อมูลส่วนบุคคล จะไม่ออกจากอุปกรณ์ของคุณ และจะถูกนำกลับมาใช้อีกครั้งหากคุณติดตั้ง SiteProof ใหม่
+      คีย์ดังกล่าวไม่มีข้อมูลส่วนบุคคล จะไม่ถูกส่งถึงเรา และจะถูกนำกลับมาใช้อีกครั้งหากคุณติดตั้ง SiteProof ใหม่ หากคุณใช้พวงกุญแจ iCloud จะมีสำเนาของคีย์เก็บไว้ที่นั่นด้วย (ส่วนที่ 7)
     </p>
     <p>
       ข้อมูลการวิเคราะห์และข้อมูลข้อขัดข้องที่ส่งไปแล้ว (ส่วนที่ 4) จะถูกเก็บรักษาโดย Google ตามการตั้งค่าการเก็บรักษาข้อมูลของ Firebase
